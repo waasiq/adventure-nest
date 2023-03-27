@@ -5,9 +5,8 @@ interface Props {
 
 const Boilerplate:React.FC<Props> = () => {
     return (    
-        <div>
-
-        </div>
+        <React.Fragment>
+        </React.Fragment>
     )    
 }
 
