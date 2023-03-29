@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "adventure-nest",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,9 +10,13 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "flowbite": "^1.6.4",
+    "flowbite-react": "^0.4.2",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-datepicker": "^4.10.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",

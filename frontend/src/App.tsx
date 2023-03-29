@@ -65,10 +65,10 @@ const App:React.FC = () => {
 
   return (
     <React.Fragment>
-        {/* <Navbar /> */}
+        <Navbar />
      
         <Router>
-          <div className="container mx-auto">
+          <div className=" mx-auto">
             <Routes>
               <Route path="/" element={<CardGrid cards={cards} />} />
               <Route path="/property-details/:id" element={<PropertyDetails />} />

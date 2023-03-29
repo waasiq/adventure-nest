@@ -7,11 +7,13 @@ interface CardGridProps {
 
 const CardGrid: React.FC<CardGridProps> = ({ cards }) => {
     return (
-      <a className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {cards.map((card, index) => (
-          <Card key={index} {...card} />
-        ))}
-      </a>
+      <div className="container mx-auto pt-10">
+        <a className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-7">
+          {cards.map((card, index) => (
+            <Card key={index} {...card} />
+          ))}
+        </a>
+      </div>
     );
 };
 
