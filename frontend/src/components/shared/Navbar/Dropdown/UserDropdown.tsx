@@ -1,21 +1,23 @@
 import React, { useState, useContext } from "react";
 import LogInOptions from "./LoginOptions";
 import LogOutOption from "./LogOutOptions";
-import { CurrentUserContext } from '../../../../context/CurrentUserContext';
+import { CurrentUserContext } from "../../../../context/CurrentUserContext";
 import { useNavigate } from "react-router-dom";
 
 const UserDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user } = useContext(CurrentUserContext);
-  const toggleMenu = () => { setIsOpen(!isOpen) }
-  
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const navigate = useNavigate();
   const redirect = () => {
     navigate("/help");
-  }
+  };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left z-10">
       <div>
         <button
           type="button"
@@ -25,10 +27,13 @@ const UserDropdown: React.FC = () => {
           aria-haspopup="true"
           onClick={toggleMenu}
         >
-          <img 
-          src={user?.picture ? user.picture : "https://via.placeholder.com/150" }
+          <img
+            src={
+              user?.picture ? user.picture : "https://via.placeholder.com/150"
+            }
             alt="Host avatar"
-            className="rounded-full h-10 w-10" />
+            className="rounded-full h-10 w-10"
+          />
         </button>
       </div>
 
@@ -40,7 +45,6 @@ const UserDropdown: React.FC = () => {
             aria-orientation="vertical"
             aria-labelledby="user-menu"
           >
-            
             <LogInOptions />
             <LogOutOption />
             <a
@@ -49,7 +53,7 @@ const UserDropdown: React.FC = () => {
               role="menuitem"
               onClick={redirect}
             >
-              Help 
+              Help
             </a>
           </div>
         </div>

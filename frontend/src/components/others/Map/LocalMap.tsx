@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Map, Marker } from 'react-map-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import React, { useEffect, useState } from "react";
+import { Map, Marker } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 interface IViewport {
   latitude: number;
@@ -8,7 +8,7 @@ interface IViewport {
   zoom: number;
 }
 
-const LocalMap:React.FC = () => {
+const LocalMap: React.FC = () => {
   const [viewport, setViewport] = useState<IViewport>({
     latitude: 40.716957,
     longitude: 30.359314,
@@ -32,10 +32,7 @@ const LocalMap:React.FC = () => {
         mapStyle={process.env.REACT_APP_MAP_STYLE_URL}
         {...viewport}
       >
-        <Marker
-          longitude={viewport.longitude}
-          latitude={viewport.latitude}
-        />
+        <Marker longitude={viewport.longitude} latitude={viewport.latitude} />
       </Map>
     </React.Fragment>
   );

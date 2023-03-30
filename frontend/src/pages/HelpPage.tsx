@@ -37,7 +37,7 @@ const HelpPage: React.FC = () => {
                       href="#"
                       className="text-lg font-medium text-indigo-600 hover:text-indigo-900"
                     >
-                      What payment methods are accepted on Airbnb?
+                      What payment methods are accepted on Adventure Nest?
                     </a>
                   </li>
                 </ul>
@@ -60,7 +60,7 @@ const HelpPage: React.FC = () => {
                       href="#"
                       className="text-lg font-medium text-indigo-600 hover:text-indigo-900"
                     >
-                      What should I do if there's a problem with my stay?
+                      What should I do if there{`'`}s a problem with my stay?
                     </a>
                   </li>
                   <li className="mb-2">
@@ -76,9 +76,9 @@ const HelpPage: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <Footer />
-        </body>
+      </body>
     </React.Fragment>
   );
 };

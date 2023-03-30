@@ -1,7 +1,7 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
-// User Interface 
-export interface User { 
+// User Interface
+export interface User {
   username: string;
   email: string;
   picture?: string;
@@ -15,24 +15,26 @@ interface CurrentUserContextType {
 }
 
 // Context
-export const CurrentUserContext = createContext<CurrentUserContextType>({} as CurrentUserContextType);
+export const CurrentUserContext = createContext<CurrentUserContextType>(
+  {} as CurrentUserContextType
+);
 
 // Provider
-interface ProviderProps { 
+interface ProviderProps {
   children: React.ReactNode;
 }
 
 // Provider Component
-export const CurrentUserProvider: React.FC<ProviderProps>  = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);  
+export const CurrentUserProvider: React.FC<ProviderProps> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const user = localStorage.getItem('user');
+    const user = localStorage.getItem("user");
     if (user) {
       setUser(JSON.parse(user));
     }
   }, []);
-  
+
   return (
     <CurrentUserContext.Provider
       value={{

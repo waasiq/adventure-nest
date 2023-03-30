@@ -1,13 +1,9 @@
-import React from 'react';
+import React from "react";
 
-interface Props {
-}
+interface Props {}
 
-const Boilerplate:React.FC<Props> = () => {
-    return (    
-        <React.Fragment>
-        </React.Fragment>
-    )    
-}
+const Boilerplate: React.FC<Props> = () => {
+  return <React.Fragment></React.Fragment>;
+};
 
-export default Boilerplate
+export default Boilerplate;
