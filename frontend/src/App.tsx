@@ -1,9 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/shared/Navbar/Navbar';
-import Card from './components/others/Card/Card';
 import CardGrid from './components/others/CardGrid/CardGrid';
 import PropertyDetails from './pages/PropertyDetails'
+import { CurrentUserProvider } from './context/CurrentUserContext';
+import HelpPage from './pages/HelpPage';
+import HostPage from './pages/Hosting/HostPage';
+import HostHome from './pages/Hosting/HostHome';
 
 const App:React.FC = () => {
   const cards = [
@@ -63,18 +66,26 @@ const App:React.FC = () => {
     },
   ];
 
+  React.useEffect(() => {
+    console.log(process.env.REACT_APP_GOOGLE_CLIENT_ID)
+  }, [])
+
   return (
     <React.Fragment>
-        <Navbar />
-     
+      <CurrentUserProvider>
         <Router>
+          <Navbar />
           <div className=" mx-auto">
             <Routes>
               <Route path="/" element={<CardGrid cards={cards} />} />
               <Route path="/property-details/:id" element={<PropertyDetails />} />
+              <Route path="/help" element={<HelpPage />} />
+              <Route path="/host" element={<HostPage />} />
+              <Route path="/hosting" element={<HostHome />} />
             </Routes>
           </div>
         </Router>
+      </CurrentUserProvider>
     </React.Fragment>
 
   );

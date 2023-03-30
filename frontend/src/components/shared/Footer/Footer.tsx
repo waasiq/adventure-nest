@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer:React.FC = () => {
     return (
-      <footer className="bg-gray-100 text-black-300">
+      <footer className="mt-auto bg-gray-100 text-black-300">
         <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between">
             <div className="mb-8 md:mb-0">
             <h3 className="text-lg font-medium">About Adventure Nest</h3>

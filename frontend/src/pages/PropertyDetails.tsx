@@ -28,10 +28,10 @@ const PropertyDetails: React.FC = () => {
         <ImageCarousel images={images} height={500} />
 
         <div className="my-10 flex">
-          <div className="flex-1">
+          <div className="flex-0.6">
             <HomeDetails />
           </div>
-          <div className="flex-0.8 pl-8">
+          <div className="flex-0.4 pl-16">
             <BookingForm />
           </div>
         </div>

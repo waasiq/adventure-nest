@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiStar } from 'react-icons/fi'
+import { AiFillStar } from 'react-icons/ai';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -14,7 +14,7 @@ const BookingForm:React.FC = () => {
           <h2 className="text-3xl font-bold">₺9,499  <p className="text-sm text-gray-600 font-medium">per night</p></h2>
           <div className="flex items-center space-x-1">
             <p className="text-lg text-gray-600 font-medium">4.9</p>
-            <FiStar className="text-yellow-500 text-lg" />
+            <AiFillStar className="text-black-500 text-lg" />
           </div>
         </div>
         <div className="flex">
