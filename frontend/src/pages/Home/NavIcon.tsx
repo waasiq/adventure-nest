@@ -19,7 +19,7 @@ const NavIcon: React.FC<NavIconProps> = (props) => {
       className="p-2 rounded-full cursor-pointer"
       onClick={() => handleIconClick(id)}
     >
-      <Icon size={24} className={"text-emerald-500"} />
+      <Icon size={24} className="text-emerald-500" />
       <p className="text-xs text-gray-500">{text}</p>
     </div>
   );

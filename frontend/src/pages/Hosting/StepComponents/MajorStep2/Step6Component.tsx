@@ -1,16 +1,15 @@
 import React from "react";
 
-const Step1Component: React.FC = () => {
+const Step6Component: React.FC = () => {
   return (
     <React.Fragment>
       <div className="flex">
         <div className="w-3/5 p-16">
-          <h1 className="text-4xl font-bold mb-4">Step 1</h1>
-          <h1 className="text-6xl font-bold mb-8">Tell us about your place</h1>
+          <h1 className="text-4xl font-bold mb-4">Step 2</h1>
+          <h1 className="text-6xl font-bold mb-8">Make your place stand out</h1>
           <p className="text-gray-600 text-xl mb-8">
-            In this step, we{`'`}ll ask you which type of property you have and if
-            guests will book the entire place or just a room. Then let us know
-            the location and how many guests can stay.
+            In this step, you{"'"}ll add 5 or more photos.
+            Then, you{"'"}ll create a title and description.
           </p>
         </div>
         <div className="w-2/5">
@@ -30,4 +29,4 @@ const Step1Component: React.FC = () => {
   );
 };
 
-export default Step1Component;
+export default Step6Component;

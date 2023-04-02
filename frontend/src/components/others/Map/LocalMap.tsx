@@ -3,15 +3,17 @@ import { Map, Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 interface IViewport {
-  latitude: number;
-  longitude: number;
-  zoom: number;
+  latitude?: number;
+  longitude?: number;
+  zoom?: number;
 }
 
-const LocalMap: React.FC = () => {
+const LocalMap: React.FC<IViewport> = (props) => {
+  const { latitude, longitude } = props;
+  
   const [viewport, setViewport] = useState<IViewport>({
-    latitude: 40.716957,
-    longitude: 30.359314,
+    latitude: latitude || 40.716957,
+    longitude: longitude || 30.359314,
     zoom: 11,
   });
 
@@ -19,11 +21,11 @@ const LocalMap: React.FC = () => {
     navigator.geolocation.getCurrentPosition((pos) => {
       setViewport((prevViewport) => ({
         ...prevViewport,
-        latitude: pos.coords.latitude,
-        longitude: pos.coords.longitude,
+        latitude: latitude || pos.coords.latitude,
+        longitude: longitude || pos.coords.longitude,
       }));
     });
-  }, []);
+  }, [latitude, longitude]);
 
   return (
     <React.Fragment>
@@ -31,6 +33,7 @@ const LocalMap: React.FC = () => {
         mapboxAccessToken={process.env.REACT_APP_MAP_ACCESS_TOKEN}
         mapStyle={process.env.REACT_APP_MAP_STYLE_URL}
         {...viewport}
+        style={{ borderRadius: "1.5rem" }} 
       >
         <Marker longitude={viewport.longitude} latitude={viewport.latitude} />
       </Map>

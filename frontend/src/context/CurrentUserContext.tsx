@@ -1,7 +1,7 @@
 import React, { createContext, useEffect, useState } from "react";
 
 // User Interface
-export interface User {
+export interface IUser {
   username: string;
   email: string;
   picture?: string;
@@ -9,24 +9,24 @@ export interface User {
 }
 
 // Context Interface
-interface CurrentUserContextType {
-  user: User | null;
-  setUser: React.Dispatch<React.SetStateAction<User | null>>;
+interface ICurrentUserContextType {
+  user: IUser | null;
+  setUser: React.Dispatch<React.SetStateAction<IUser | null>>;
 }
 
 // Context
-export const CurrentUserContext = createContext<CurrentUserContextType>(
-  {} as CurrentUserContextType
+export const CurrentUserContext = createContext<ICurrentUserContextType>(
+  {} as ICurrentUserContextType
 );
 
 // Provider
-interface ProviderProps {
+interface IProviderProps {
   children: React.ReactNode;
 }
 
 // Provider Component
-export const CurrentUserProvider: React.FC<ProviderProps> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
+export const CurrentUserProvider: React.FC<IProviderProps> = ({ children }) => {
+  const [user, setUser] = useState<IUser | null>(null);
 
   useEffect(() => {
     const user = localStorage.getItem("user");

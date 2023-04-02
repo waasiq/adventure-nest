@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CurrentUserProvider } from "./context/CurrentUserContext";
 
@@ -12,8 +12,8 @@ import {
 } from "./pages";
 
 const App: React.FC = () => {
-  React.useEffect(() => {
-    console.log(process.env.REACT_APP_GOOGLE_CLIENT_ID);
+  useEffect(() => {
+    document.title = "Adventure Nest";
   }, []);
 
   return (

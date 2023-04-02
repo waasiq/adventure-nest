@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
-import { User, CurrentUserContext } from "../context/CurrentUserContext";
+import { IUser, CurrentUserContext } from "../context/CurrentUserContext";
 
-interface decodedData {
+interface IDecodedData {
   name: string;
   picture: string;
   email: string;
@@ -14,9 +14,9 @@ const Login: React.FC = () => {
 
   const handleLogin = async (res: any) => {
     // data from google API decoded and stored in User object
-    const decoded_data: decodedData = jwtDecode(res.credential);
+    const decoded_data: IDecodedData = jwtDecode(res.credential);
 
-    const User: User = {
+    const User: IUser = {
       username: decoded_data.name,
       email: decoded_data.email,
       picture: decoded_data.picture,

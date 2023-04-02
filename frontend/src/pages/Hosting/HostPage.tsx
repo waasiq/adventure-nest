@@ -26,7 +26,7 @@ const HostPage: React.FC = () => {
       <div className="flex justify-center">
         <button
           onClick={redirectHost}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-16 rounded-full"
+          className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-4 px-16 rounded-full"
         >
           Host your home
         </button>

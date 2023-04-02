@@ -1,5 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export interface CardProps {
   id: number;
@@ -31,10 +33,10 @@ const Card: React.FC<CardProps> = ({
     >
       <img src={imageURL} alt={title} className="w-full h-48 object-cover" />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">{location}</p>
-        <p className="text-gray-700 text-base">{price}</p>
-        <p className="text-gray-700 text-base">{rating}</p>
+        <div className="font-bold text-xl mb-2">{title || <Skeleton count={1} />}</div>
+        <p className="text-gray-700 text-base">{location || <Skeleton count={1} />}</p>
+        <p className="text-gray-700 text-base">{price || <Skeleton count={1} />}</p>
+        <p className="text-gray-700 text-base">{rating || <Skeleton count={1} />}</p>
       </div>
     </div>
   );
