@@ -13,6 +13,7 @@ export interface IHost {
     numOfBathrooms?: number;
     selectedHomeIcon?: string;
     selectedPlaceIcon?: string;
+    images?: any[]; //! Getting lint error don't know type of img obj
 }
 
 // Context Interface

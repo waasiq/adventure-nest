@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { FaHome } from "react-icons/fa";
 import { MdApartment, MdCabin, MdHolidayVillage } from "react-icons/md";
 import { GiBarn } from "react-icons/gi";
@@ -8,7 +8,6 @@ import HomeIcon from "./HomeIcon";
 
 const Step2Component: React.FC = () => {
   const { host, setHost } = useContext(HostContext);
-
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     const target = e.target as HTMLElement;
@@ -23,7 +22,6 @@ const Step2Component: React.FC = () => {
       homeType: finalVal as string,
       selectedHomeIcon: finalVal as string,
     });
-    console.log(host?.selectedHomeIcon)
   }
 
   return (
