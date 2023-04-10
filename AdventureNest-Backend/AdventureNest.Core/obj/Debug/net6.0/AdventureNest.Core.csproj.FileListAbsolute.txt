@@ -1,0 +1,12 @@
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\bin\Debug\net6.0\AdventureNest.Core.deps.json
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\bin\Debug\net6.0\AdventureNest.Core.dll
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\bin\Debug\net6.0\AdventureNest.Core.pdb
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\obj\Debug\net6.0\AdventureNest.Core.csproj.AssemblyReference.cache
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\obj\Debug\net6.0\AdventureNest.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\obj\Debug\net6.0\AdventureNest.Core.AssemblyInfoInputs.cache
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\obj\Debug\net6.0\AdventureNest.Core.AssemblyInfo.cs
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\obj\Debug\net6.0\AdventureNest.Core.csproj.CoreCompileInputs.cache
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\obj\Debug\net6.0\AdventureNest.Core.dll
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\obj\Debug\net6.0\refint\AdventureNest.Core.dll
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\obj\Debug\net6.0\AdventureNest.Core.pdb
+C:\Users\Mert Sigirci\Desktop\AdventureNest\AdventureNest.Core\obj\Debug\net6.0\ref\AdventureNest.Core.dll

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "X5IrcjzFPSmd8DN6IhwSOtGZt32Tn19nAWHD8RGLSDA=",
+  "Source": "AdventureNest.API",
+  "BasePath": "_content/AdventureNest.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
