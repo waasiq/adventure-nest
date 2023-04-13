@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mert Sigirci\\Desktop\\AdventureNest\\AdventureNest.Core\\AdventureNest.Core.csproj": {}
+    "C:\\Users\\Mert Sigirci\\Desktop\\adventure-nest\\AdventureNest-Backend\\AdventureNest.Core\\AdventureNest.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mert Sigirci\\Desktop\\AdventureNest\\AdventureNest.Core\\AdventureNest.Core.csproj": {
+    "C:\\Users\\Mert Sigirci\\Desktop\\adventure-nest\\AdventureNest-Backend\\AdventureNest.Core\\AdventureNest.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mert Sigirci\\Desktop\\AdventureNest\\AdventureNest.Core\\AdventureNest.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Mert Sigirci\\Desktop\\adventure-nest\\AdventureNest-Backend\\AdventureNest.Core\\AdventureNest.Core.csproj",
         "projectName": "AdventureNest.Core",
-        "projectPath": "C:\\Users\\Mert Sigirci\\Desktop\\AdventureNest\\AdventureNest.Core\\AdventureNest.Core.csproj",
+        "projectPath": "C:\\Users\\Mert Sigirci\\Desktop\\adventure-nest\\AdventureNest-Backend\\AdventureNest.Core\\AdventureNest.Core.csproj",
         "packagesPath": "C:\\Users\\Mert Sigirci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mert Sigirci\\Desktop\\AdventureNest\\AdventureNest.Core\\obj\\",
+        "outputPath": "C:\\Users\\Mert Sigirci\\Desktop\\adventure-nest\\AdventureNest-Backend\\AdventureNest.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

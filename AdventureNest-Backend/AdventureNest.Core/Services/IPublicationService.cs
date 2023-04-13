@@ -15,5 +15,9 @@ namespace AdventureNest.Core.Services
         Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithDescendingPrice();
 
         Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithAscendingPrice();
+
+        Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithHouseTypes(string houseType);
+
+        Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithBookingTypes(string bookingType);
     }
 }

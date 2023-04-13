@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AzVnqypoNWhNPU6GX0uUBOz1s621Ap7SNCGrjZqs7pNGqg2aUVqieS0W0UsotS7ePm/oJHiy6mz1EYa4s7Ouiw==",
+  "dgSpecHash": "KNWb7qefsVhhIzsg6qmF7rd/bdcrc+8duL++hzXGiEpoMRUcBn7euref1++LOWGL75cK7/wP35B6/Z+XTHqRFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mert Sigirci\\Desktop\\AdventureNest\\AdventureNest.Repository\\AdventureNest.Repository.csproj",
+  "projectFilePath": "C:\\Users\\Mert Sigirci\\Desktop\\adventure-nest\\AdventureNest-Backend\\AdventureNest.Repository\\AdventureNest.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mert Sigirci\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Mert Sigirci\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

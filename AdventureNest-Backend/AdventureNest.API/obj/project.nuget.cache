@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "slhQjZmdbKLMhnMi3U1hKY8YM0AUbg5pzHBkrmGm8L0XB2Htbk+W99IoX2HrFAcOZTUXOftiYvJGymDsTsiqFg==",
+  "dgSpecHash": "jgFoN6KtWDuNonPqQsnYlSXH9AENVVxxWol70dVO5jUaXX+YQl/E7JEKd7ajFx9BaXeoZjjb3SCEzETIuw8uXw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mert Sigirci\\Desktop\\AdventureNest\\AdventureNest.API\\AdventureNest.API.csproj",
+  "projectFilePath": "C:\\Users\\Mert Sigirci\\Desktop\\adventure-nest\\AdventureNest-Backend\\AdventureNest.API\\AdventureNest.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mert Sigirci\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Mert Sigirci\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

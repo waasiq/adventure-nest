@@ -20,61 +20,50 @@ namespace AdventureNest.Service.Services
             _publicationRepository = publicationRepository;
         }
 
-        public async Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithAscendingPrice()
+        public async Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithProperties()
         {
             var publications = await _publicationRepository.GetPublicationsWithProperties();
-            List<PublicationsWithPropertyDto> list = new List<PublicationsWithPropertyDto>();
-            PublicationsWithPropertyDto dto = new PublicationsWithPropertyDto();
 
-            foreach (var item in publications)
-            {
-                var x = _mapper.Map<PublicationDto>(item.Publication);
-                var y = _mapper.Map<PropertyDto>(item.Property);
-                dto.PropertyDto = y;
-                dto.PublicationDto = x;
-                list.Add(dto);
-            }
-            //var publicationsDtos = _mapper.Map<List<PublicationsWithPropertyDto>>(publications);
-            return CustomResponseDto<List<PublicationsWithPropertyDto>>.Success(200, list);
+            var publicationsWithPropertyDto = _mapper.Map<List<PublicationsWithPropertyDto>>(publications);
+
+            return CustomResponseDto<List<PublicationsWithPropertyDto>>.Success(200, publicationsWithPropertyDto);
+        }
+
+        public async Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithAscendingPrice()
+        {
+            var publications = await _publicationRepository.GetPublicationsWithAscendingPrice();
+
+            var publicationsWithPropertyDto = _mapper.Map<List<PublicationsWithPropertyDto>>(publications);
+
+            return CustomResponseDto<List<PublicationsWithPropertyDto>>.Success(200, publicationsWithPropertyDto);
         }
 
         public async Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithDescendingPrice()
         {
-            var publications = await _publicationRepository.GetPublicationsWithProperties();
-            List<PublicationsWithPropertyDto> list = new List<PublicationsWithPropertyDto>();
-            PublicationsWithPropertyDto dto = new PublicationsWithPropertyDto();
+            var publications = await _publicationRepository.GetPublicationsWithDescendingPrice();
 
-            foreach (var item in publications)
-            {
-                var x = _mapper.Map<PublicationDto>(item.Publication);
-                var y = _mapper.Map<PropertyDto>(item.Property);
-                dto.PropertyDto = y;
-                dto.PublicationDto = x;
-                list.Add(dto);
-            }
-            //var publicationsDtos = _mapper.Map<List<PublicationsWithPropertyDto>>(publications);
-            return CustomResponseDto<List<PublicationsWithPropertyDto>>.Success(200, list);
+            var publicationsWithPropertyDto = _mapper.Map<List<PublicationsWithPropertyDto>>(publications);
+
+            return CustomResponseDto<List<PublicationsWithPropertyDto>>.Success(200, publicationsWithPropertyDto);
         }
 
-        public async Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithProperties()
+        public async Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithHouseTypes(string houseType)
         {
-            var publications = await _publicationRepository.GetPublicationsWithProperties();
-            List<PublicationsWithPropertyDto> list = new List<PublicationsWithPropertyDto>();
-            PublicationsWithPropertyDto dto = new PublicationsWithPropertyDto();
+            var publications = await _publicationRepository.GetPublicationsWithHouseTypes(houseType);
 
-            foreach (var item in publications)
-            {
-                var x = _mapper.Map<PublicationDto>(item.Publication);
-                var y = _mapper.Map<PropertyDto>(item.Property);
-                dto.PropertyDto = y;
-                dto.PublicationDto = x;
-                list.Add(dto);
-                dto.PropertyDto = null;
-                dto.PublicationDto = null;
-            }
-            //var publicationsDtos = _mapper.Map<List<PublicationsWithPropertyDto>>(publications);
-            return CustomResponseDto<List<PublicationsWithPropertyDto>>.Success(200,list);
+            var publicationsWithPropertyDto = _mapper.Map<List<PublicationsWithPropertyDto>>(publications);
+
+            return CustomResponseDto<List<PublicationsWithPropertyDto>>.Success(200, publicationsWithPropertyDto);
         }
-       
+
+        public async Task<CustomResponseDto<List<PublicationsWithPropertyDto>>> GetPublicationsWithBookingTypes(string bookingType)
+        {
+            var publications = await _publicationRepository.GetPublicationsWithBookingTypes(bookingType);
+
+            var publicationsWithPropertyDto = _mapper.Map<List<PublicationsWithPropertyDto>>(publications);
+
+            return CustomResponseDto<List<PublicationsWithPropertyDto>>.Success(200, publicationsWithPropertyDto);
+        }
+
     }
 }

@@ -76,14 +76,14 @@ namespace AdventureNest.API.Controllers
 
         [HttpGet("publications-with-property")]
         [AllowAnonymous]
-        public  async Task<IActionResult> GetPublicationsWithProperties()
+        public async Task<IActionResult> GetPublicationsWithProperties()
         {
             var response = await _service.GetPublicationsWithProperties();
 
             return await CreateActionResult(response);
         }
 
-        [HttpGet("publications-orderBy-desc")]
+        [HttpGet("orderBy-desc")]
         [AllowAnonymous]
         public async Task<IActionResult> GetPublicationsWithDescendingPrice()
         {
@@ -92,11 +92,29 @@ namespace AdventureNest.API.Controllers
             return await CreateActionResult(response);
         }
 
-        [HttpGet("publications-orderBy-asc")]
+        [HttpGet("orderBy-asc")]
         [AllowAnonymous]
         public async Task<IActionResult> GetPublicationsWithAscendingPrice()
         {
             var response = await _service.GetPublicationsWithAscendingPrice();
+
+            return await CreateActionResult(response);
+        }
+
+        [HttpGet("houseType")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetPublicationsWithHouseType([FromQuery] string houseType)
+        {
+            var response = await _service.GetPublicationsWithHouseTypes(houseType);
+
+            return await CreateActionResult(response);
+        }
+
+        [HttpGet("bookingType")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetPublicationsWithBookingType([FromQuery] string bookingType)
+        {
+            var response = await _service.GetPublicationsWithBookingTypes(bookingType);
 
             return await CreateActionResult(response);
         }

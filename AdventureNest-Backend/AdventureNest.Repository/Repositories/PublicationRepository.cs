@@ -16,80 +16,36 @@ namespace AdventureNest.Repository.Repositories
         {
         }
 
-        public async Task<List<PublicationAndPropertyDTO>> GetPublicationsWithAscendingPrice()
+        public async Task<List<Publication>> GetPublicationsWithProperties()
         {
-            var x = await _context.Publications.OrderBy(x => x.Price).ToListAsync();
-            var y = await _context.Properties.ToListAsync();
-
-            List<PublicationAndPropertyDTO> list = new List<PublicationAndPropertyDTO>();
-            PublicationAndPropertyDTO dto = new PublicationAndPropertyDTO();
-
-            foreach (var item in x)
-            {
-                foreach (var item2 in y)
-                {
-                    if (item.PropertyId == item2.Id)
-                    {
-                        dto.Property = item2;
-                        dto.Publication = item;
-                        list.Add(dto);
-                        break;
-                    }
-                }
-            }
-            return list;
+            var publications = await _context.Publications.Include(x => x.Property).ToListAsync();
+            return publications;
         }
 
-        public async Task<List<PublicationAndPropertyDTO>> GetPublicationsWithDescendingPrice()
+        public async Task<List<Publication>> GetPublicationsWithAscendingPrice()
         {
-            var x = await _context.Publications.OrderByDescending(x => x.Price).ToListAsync();
-            var y = await _context.Properties.ToListAsync();
-
-            List<PublicationAndPropertyDTO> list = new List<PublicationAndPropertyDTO>();
-            PublicationAndPropertyDTO dto = new PublicationAndPropertyDTO();
-
-            foreach (var item in x)
-            {
-                foreach (var item2 in y)
-                {
-                    if (item.PropertyId == item2.Id)
-                    {
-                        dto.Property = item2;
-                        dto.Publication = item;
-                        list.Add(dto);
-                        break;
-                    }
-                }
-            }
-
-            return list;
-
+            var publications = await _context.Publications.Include(x => x.Property).OrderBy(y => y.Price).ToListAsync();
+            return publications;
         }
 
-        public async Task<List<PublicationAndPropertyDTO>> GetPublicationsWithProperties()
+        public async Task<List<Publication>> GetPublicationsWithDescendingPrice()
         {
-            var x = await _context.Publications.ToListAsync();
-            var y = await _context.Properties.ToListAsync();
+            var publications = await _context.Publications.Include(x => x.Property).OrderByDescending(y => y.Price).ToListAsync();
+            return publications;
+        }
 
-            List<PublicationAndPropertyDTO> list = new List<PublicationAndPropertyDTO>();
-            PublicationAndPropertyDTO dto = new PublicationAndPropertyDTO();
+        public async Task<List<Publication>> GetPublicationsWithHouseTypes(string houseType)
+        {
+            var publications = await _context.Publications.Include(x => x.Property)
+                .Where(z => z.Property.PropertyType == houseType).ToListAsync();
+            return publications;
+        }
 
-            foreach(var item in x)
-            {
-                foreach(var item2 in y) 
-                {
-                    if(item.PropertyId == item2.Id)
-                    {
-                        dto.Property = item2;
-                        dto.Publication = item;
-                        list.Add(dto);
-                        
-                        break;
-                    }
-                }
-            }
-            
-            return list;
+        public async Task<List<Publication>> GetPublicationsWithBookingTypes(string bookingType)
+        {
+            var publications = await _context.Publications.Include(x => x.Property)
+                .Where(z => z.Property.BookingType == bookingType).ToListAsync();
+            return publications;
         }
     }
 }

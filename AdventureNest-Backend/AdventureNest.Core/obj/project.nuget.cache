@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JARfqntyYCDu4MDPOx1RG9Ygz+We0ATHVoxglDL6TvtY8N64jTPZEKL7HswM4CfYz/AE3PO/gw8t79O10MOWLw==",
+  "dgSpecHash": "lBm9Jsv2Hog49l7WBNKerPNIVAc50/V1gyTAw26n8/S46iM6fKcEV+aF33tvLjA/veCc/VCHWLQ5vy5R8dCnYw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mert Sigirci\\Desktop\\AdventureNest\\AdventureNest.Core\\AdventureNest.Core.csproj",
+  "projectFilePath": "C:\\Users\\Mert Sigirci\\Desktop\\adventure-nest\\AdventureNest-Backend\\AdventureNest.Core\\AdventureNest.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
