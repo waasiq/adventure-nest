@@ -1,11 +1,6 @@
 ﻿using AdventureNest.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventureNest.Repository.Configuring
 {
@@ -17,6 +12,8 @@ namespace AdventureNest.Repository.Configuring
             builder.Property(x => x.Id).UseIdentityColumn();
             builder.Property(x => x.Header).IsRequired().HasMaxLength(40);
             builder.Property(x => x.Description).IsRequired().HasMaxLength(200);
+            // builder.Property(x => x.Location).IsRequired().HasMaxLength(40);
+            // builder.Property(x => x.Rating).IsRequired().HasColumnType("float");
             builder.Property(x => x.Price).IsRequired().HasColumnType("decimal(18,2)");
             builder.Property(x => x.IsActive).IsRequired();
 

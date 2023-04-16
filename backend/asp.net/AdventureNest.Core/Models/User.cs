@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventureNest.Core.Models
 {
@@ -19,7 +14,6 @@ namespace AdventureNest.Core.Models
 
         public byte[] PasswordSalt { get; set; }
 
-        public DateTime Birthday { get; set; }
 
         public string ProfilePhotoPath { get; set; }
 

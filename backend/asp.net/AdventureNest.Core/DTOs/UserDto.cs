@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventureNest.Core.DTOs
 {
@@ -20,6 +16,6 @@ namespace AdventureNest.Core.DTOs
 
         public DateTime Birthday { get; set; }
 
-        public string ProfilePhotoPath { get; set; }
+        public string Picture { get; set; }
     }
 }

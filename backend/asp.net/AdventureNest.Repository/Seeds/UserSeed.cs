@@ -1,12 +1,8 @@
 ﻿using AdventureNest.Core.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventureNest.Repository.Seeds
 {
@@ -40,7 +36,6 @@ namespace AdventureNest.Repository.Seeds
                     FirsName = "string1",
                     LastName = "string1",
                     ProfilePhotoPath = "string1",
-                    Birthday = DateTime.Parse("1999-09-19 10:30:00"),
                     CreatedDate = DateTime.Parse("2023-09-09 10:30:00"),
                     PasswordSalt = user1PasswordSalt,
                     PasswordHash = user1PasswordHash
@@ -52,7 +47,6 @@ namespace AdventureNest.Repository.Seeds
                     FirsName = "string2",
                     LastName = "string2",
                     ProfilePhotoPath = "string2",
-                    Birthday = DateTime.Parse("1998-08-18 10:30:00"),
                     CreatedDate = DateTime.Parse("2023-08-08 10:30:00"),
                     PasswordSalt = user2PasswordSalt,
                     PasswordHash = user2PasswordHash
@@ -64,7 +58,6 @@ namespace AdventureNest.Repository.Seeds
                     FirsName = "string3",
                     LastName = "string3",
                     ProfilePhotoPath = "string3",
-                    Birthday = DateTime.Parse("1997-07-17 10:30:00"),
                     CreatedDate = DateTime.Parse("2023-07-07 10:30:00"),
                     PasswordSalt = user3PasswordSalt,
                     PasswordHash = user3PasswordHash

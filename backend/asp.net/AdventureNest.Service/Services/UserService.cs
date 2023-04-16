@@ -41,7 +41,6 @@ namespace AdventureNest.Service.Services
             {
                 return CustomResponseDto<UserDto>.Fail(400,ex.Message);
             }
-            
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
@@ -53,7 +52,6 @@ namespace AdventureNest.Service.Services
             }
         }
 
-        
         private bool VerifyPasswordHash(string password, byte[] passwordSalt, byte[] passwordHash)
         {
             using (var hmac = new HMACSHA512(passwordSalt))

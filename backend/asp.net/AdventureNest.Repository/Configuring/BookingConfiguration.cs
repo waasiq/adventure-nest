@@ -1,11 +1,6 @@
 ﻿using AdventureNest.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventureNest.Repository.Configuring
 {
@@ -27,7 +22,6 @@ namespace AdventureNest.Repository.Configuring
 
             builder.HasOne(x => x.Publication).WithMany(x => x.Bookings)
                 .HasForeignKey(x => x.PublicationId);
-
         }
     }
 }

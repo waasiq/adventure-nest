@@ -2,7 +2,9 @@ import React, { createContext, useEffect, useState } from "react";
 
 // User Interface
 export interface IUser {
-  username: string;
+  firstname: string;
+  lastname: string;
+  password?: string;
   email: string;
   picture?: string;
   id?: string;

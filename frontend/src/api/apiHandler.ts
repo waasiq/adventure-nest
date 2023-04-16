@@ -4,13 +4,13 @@ const api = axios.create({
   baseURL: 'https://localhost:7052/api',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'bearer ' + localStorage.getItem('token'),
+    'Authorization': `bearer ${localStorage.getItem('token')}` || '',
   },
 });
 
 export async function getAPIHandler<T>(url: string, params?: string, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {
-  const response = await api.get<T>(url, { params, ...config });
-  return response;
+    const response = await api.get<T>(url, { params, ...config });
+    return response;
 }
 
 export async function postAPIHandler<T>(url: string, data: any, config?: AxiosRequestConfig): Promise<AxiosResponse<T>> {

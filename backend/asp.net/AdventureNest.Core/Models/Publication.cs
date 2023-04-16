@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AdventureNest.Core.Models
 {
@@ -16,6 +11,10 @@ namespace AdventureNest.Core.Models
         public string Description { get; set; }
 
         public decimal Price { get; set; }
+
+        // public float Rating { get; set; }
+
+        // public string Location { get; set; }
 
         public bool IsActive { get; set; }
 

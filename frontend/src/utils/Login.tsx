@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
 import { IUser, CurrentUserContext } from "../context/CurrentUserContext";
+import { postAPIHandler } from "../api/apiHandler";
 
 interface IDecodedData {
-  name: string;
+  given_name: string;
+  family_name: string;
+  password: string;
   picture: string;
   email: string;
 }
@@ -15,12 +18,23 @@ const Login: React.FC = () => {
   const handleLogin = async (res: any) => {
     // data from google API decoded and stored in User object
     const decoded_data: IDecodedData = jwtDecode(res.credential);
+    console.log(decoded_data)
 
     const User: IUser = {
-      username: decoded_data.name,
+      firstname: decoded_data.given_name,
+      lastname: decoded_data.family_name,
+      password: "string",
       email: decoded_data.email,
       picture: decoded_data.picture,
     };
+
+    // User object sent to backend to be stored in database
+    try {
+      // await postAPIHandler("/users", User); // if user already exists just register token
+    } catch (error) {
+      console.log(error);
+    }
+
     setUser(User);
     localStorage.setItem("user", JSON.stringify(User));
   };
