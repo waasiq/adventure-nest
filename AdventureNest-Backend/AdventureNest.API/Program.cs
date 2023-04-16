@@ -59,6 +59,18 @@ builder.Services.AddDbContext<AppDbContext>(x =>
     });
 });
 
+//CORS
+var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy  =>
+                      {
+                          policy.WithOrigins("http://example.com",
+                                              "http://www.contoso.com");
+                      });
+});
+
 //Options Pattern
 builder.Services.Configure<CustomTokenOption>(builder.Configuration.GetSection("TokenOption"));
 var tokenOptions = builder.Configuration.GetSection("TokenOption").Get<CustomTokenOption>();
@@ -96,6 +108,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(MyAllowSpecificOrigins);
 
 app.UseAuthentication();
 
