@@ -1,3 +1,4 @@
+using AdventureNest.API.Attributes;
 using AdventureNest.API.Filters;
 using AdventureNest.API.Middleware;
 using AdventureNest.Core.Configuration;
@@ -9,8 +10,11 @@ using AdventureNest.Repository.Repositories;
 using AdventureNest.Repository.UnitOfWorks;
 using AdventureNest.Service.Mapping;
 using AdventureNest.Service.Services;
+using AdventureNest.Service.Validations;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
@@ -18,7 +22,21 @@ using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
+#pragma warning disable CS0618 
+//FluentValidation library
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(new ValidateFilterAttribute());
+}).AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<UserDtoValidator>())
+  .AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<PropertyDtoValidator>())
+  .AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<PublicationDtoValidator>())
+  .AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<BookingDtoValidator>());
+    
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.SuppressModelStateInvalidFilter = true;
+});
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(options =>
