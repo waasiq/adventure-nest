@@ -28,7 +28,7 @@ namespace AdventureNest.Core.Services
         Task<CustomResponseDto<NoContentDto>> Update(TDto dto, int id);
 
         //Any
-        Task<bool> AnyAsync(Expression<Func<TDto, bool>> expression);
+        Task<bool> AnyAsync(Expression<Func<TEntity, bool>> expression);
 
         //Where
         Task<CustomResponseDto<IEnumerable<TDto>>> Where(Expression<Func<TEntity, bool>> expression);

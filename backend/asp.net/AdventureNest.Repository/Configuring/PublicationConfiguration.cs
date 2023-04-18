@@ -10,10 +10,8 @@ namespace AdventureNest.Repository.Configuring
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
-            builder.Property(x => x.Header).IsRequired().HasMaxLength(40);
+            builder.Property(x => x.Title).IsRequired().HasMaxLength(40).HasColumnName("Title");
             builder.Property(x => x.Description).IsRequired().HasMaxLength(200);
-            // builder.Property(x => x.Location).IsRequired().HasMaxLength(40);
-            // builder.Property(x => x.Rating).IsRequired().HasColumnType("float");
             builder.Property(x => x.Price).IsRequired().HasColumnType("decimal(18,2)");
             builder.Property(x => x.IsActive).IsRequired();
 

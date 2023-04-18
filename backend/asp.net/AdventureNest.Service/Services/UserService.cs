@@ -35,6 +35,8 @@ namespace AdventureNest.Service.Services
                 await _userRepository.CreateUserAsync(newUser);
                 await _unitOfWork.CommitAsync();
 
+                dto = _mapper.Map<UserDto>(newUser);
+
                 return CustomResponseDto<UserDto>.Success(201, dto);
             }
             catch (Exception ex)

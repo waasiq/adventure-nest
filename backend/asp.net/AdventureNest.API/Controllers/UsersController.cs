@@ -1,4 +1,6 @@
-﻿using AdventureNest.Core.DTOs;
+﻿using AdventureNest.API.Attributes;
+using AdventureNest.API.Filters;
+using AdventureNest.Core.DTOs;
 using AdventureNest.Core.Models;
 using AdventureNest.Core.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -10,6 +12,7 @@ namespace AdventureNest.API.Controllers
     [Route("api/users")]
     [ApiController]
     [Authorize]
+    [ValidateFilter]
     public class UsersController : CustomController
     {
         private readonly IUserService _service;
@@ -38,6 +41,7 @@ namespace AdventureNest.API.Controllers
 
         [HttpPost]
         [AllowAnonymous]
+        [ServiceFilter(typeof(UserExistFilter))]
         public async Task<IActionResult> AddUser([FromBody] UserDto userDto)
         {
             var response = await _service.CreateUser(userDto);

@@ -2,6 +2,7 @@
 using AdventureNest.Core.Repositories;
 using AdventureNest.Core.Services;
 using AdventureNest.Core.UnitOfWorks;
+using AdventureNest.Service.Exceptions;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
@@ -49,9 +50,9 @@ namespace AdventureNest.Service.Services
             return CustomResponseDto<IEnumerable<TDto>>.Success(201, newDtos);
         }
 
-        public Task<bool> AnyAsync(Expression<Func<TDto, bool>> expression)
+        public async Task<bool> AnyAsync(Expression<Func<TEntity, bool>> expression)
         {
-            throw new NotImplementedException();
+            return await _repository.AnyAsync(expression);
         }
 
         public async Task<CustomResponseDto<IEnumerable<TDto>>> GetAllAsync()
@@ -69,7 +70,8 @@ namespace AdventureNest.Service.Services
 
             if (entity is null)
             {
-                return CustomResponseDto<TDto>.Fail(404, "Data has not found.");
+                //return CustomResponseDto<TDto>.Fail(404, "Data has not found.");
+                throw new NotFoundException($"{typeof(TEntity).Name}({id}) not found.");
             }
 
             var dto = _mapper.Map<TDto>(entity);
@@ -95,7 +97,7 @@ namespace AdventureNest.Service.Services
             var entities = _mapper.Map<IEnumerable<TEntity>>(dtos);
             if(entities is null)
             {
-                return CustomResponseDto<NoContentDto>.Fail(404, "Datas have not found");
+                return CustomResponseDto<NoContentDto>.Fail(404, "Datas have not found.");
             }
             _repository.RemoveRange(entities);
             _unitOfWork.Commit();

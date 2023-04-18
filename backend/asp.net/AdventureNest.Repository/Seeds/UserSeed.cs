@@ -33,9 +33,9 @@ namespace AdventureNest.Repository.Seeds
                 {
                     Id = 1,
                     Email = "string1@hotmail.com",
-                    FirsName = "string1",
+                    FirstName = "string1",
                     LastName = "string1",
-                    ProfilePhotoPath = "string1",
+                    Picture = "string1",
                     CreatedDate = DateTime.Parse("2023-09-09 10:30:00"),
                     PasswordSalt = user1PasswordSalt,
                     PasswordHash = user1PasswordHash
@@ -44,9 +44,9 @@ namespace AdventureNest.Repository.Seeds
                 {
                     Id = 2,
                     Email = "string2@hotmail.com",
-                    FirsName = "string2",
+                    FirstName = "string2",
                     LastName = "string2",
-                    ProfilePhotoPath = "string2",
+                    Picture = "string2",
                     CreatedDate = DateTime.Parse("2023-08-08 10:30:00"),
                     PasswordSalt = user2PasswordSalt,
                     PasswordHash = user2PasswordHash
@@ -55,9 +55,9 @@ namespace AdventureNest.Repository.Seeds
                 {
                     Id = 3,
                     Email = "string3@hotmail.com",
-                    FirsName = "string3",
+                    FirstName = "string3",
                     LastName = "string3",
-                    ProfilePhotoPath = "string3",
+                    Picture = "string3",
                     CreatedDate = DateTime.Parse("2023-07-07 10:30:00"),
                     PasswordSalt = user3PasswordSalt,
                     PasswordHash = user3PasswordHash

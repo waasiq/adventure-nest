@@ -14,10 +14,6 @@ namespace AdventureNest.Core.DTOs
 
         public decimal Price { get; set; }
 
-        public float Rating { get; set; }
-
-        public string Location { get; set; }
-
         public bool IsActive { get; set; }
     }
 }

@@ -1,3 +1,5 @@
+using AdventureNest.API.Filters;
+using AdventureNest.API.Middleware;
 using AdventureNest.Core.Configuration;
 using AdventureNest.Core.Repositories;
 using AdventureNest.Core.Services;
@@ -30,6 +32,9 @@ builder.Services.AddSwaggerGen(options =>
     });
     options.OperationFilter<SecurityRequirementsOperationFilter>();
 });
+
+//Filter DI
+builder.Services.AddScoped(typeof(UserExistFilter));
 
 //Dependency Inversion
 builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
@@ -102,6 +107,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCustomException();
 app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
