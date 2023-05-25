@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import jwtDecode from "jwt-decode";
-import { IUser, CurrentUserContext } from "../context/CurrentUserContext";
+import { CurrentUserContext } from "../context/CurrentUserContext";
 import { postAPIHandler } from "../api/apiHandler";
+import { IUser } from "../types/types";
 
 interface IDecodedData {
   given_name: string;

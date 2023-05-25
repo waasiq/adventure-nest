@@ -1,14 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-
-// User Interface
-export interface IUser {
-  firstname: string;
-  lastname: string;
-  password?: string;
-  email: string;
-  picture?: string;
-  id?: string;
-}
+import { IUser } from "../types/types";
 
 // Context Interface
 interface ICurrentUserContextType {

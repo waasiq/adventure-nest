@@ -32,6 +32,7 @@ namespace AdventureNest.API.Controllers
         }
 
         [HttpGet("{id}")]
+        [AllowAnonymous]
         public async Task<IActionResult> GetUserById(int id)
         {
             var response = await _service.GetByIdAsync(id);

@@ -14,7 +14,7 @@ const Step8Component: React.FC = () => {
       });
     }
 
-    await axios.post("http://localhost:5000/api/hosting", formData).then((res) => {
+    await axios.post("http://localhost:5000/api/detect", formData).then((res) => {
       console.log(res);
     });
   };
