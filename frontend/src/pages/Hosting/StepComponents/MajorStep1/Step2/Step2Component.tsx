@@ -20,6 +20,7 @@ const Step2Component: React.FC = () => {
     setHost({
       ...host,
       homeType: finalVal as string,
+      propertyType: finalVal as string,
       selectedHomeIcon: finalVal as string,
     });
   }

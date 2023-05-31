@@ -29,10 +29,8 @@ const BookingForm: React.FC = () => {
     const res: IResponse= users.data as IResponse;
     const usersData = res.data as any;
 
-
     let userID = 0;
 
-    console.log(usersData);
     for (let i = 0; i < usersData.length; i++) {
       if (usersData[i].firstName === user?.firstname) {
         userID = usersData[i].id;
@@ -56,7 +54,6 @@ const BookingForm: React.FC = () => {
     if (postRes.status === 201) {
       alert("Booking successful!");
     }
-    
   };
 
   const handlePriceChange = () => {

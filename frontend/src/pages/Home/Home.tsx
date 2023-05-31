@@ -157,7 +157,7 @@ const Home: React.FC = () => {
           />
           <NavIcon
             Icon={MdHolidayVillage}
-            text="Village"
+            text="Villa"
             handleIconClick={handleIconClick}
             id={5}
           />

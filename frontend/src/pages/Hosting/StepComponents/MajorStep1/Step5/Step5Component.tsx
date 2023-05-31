@@ -5,10 +5,10 @@ import { HostContext } from "../../../../../context/HostingContext";
 const Step5Component: React.FC = () => {
   const { host, setHost } = useContext(HostContext);
 
-  const [guests, setGuests] = useState(host?.numOfGuests || 1);
-  const [bedrooms, setBedrooms] = useState(host?.numOfBedrooms || 1);
-  const [beds, setBeds] = useState(host?.numOfBeds || 1);
-  const [bathrooms, setBathrooms] = useState(host?.numOfBathrooms || 1);
+  const [guests, setGuests] = useState(host?.maxGuestCount || 1);
+  const [bedrooms, setBedrooms] = useState(host?.bedroomCount || 1);
+  const [beds, setBeds] = useState(host?.bathroomCount || 1);
+  const [bathrooms, setBathrooms] = useState(host?.bedCount || 1);
 
   const onStepperChange = (count: number, title: string) => {
     switch (title) {
@@ -30,10 +30,10 @@ const Step5Component: React.FC = () => {
 
     setHost({
       ...host,
-      numOfGuests: guests,
-      numOfBedrooms: bedrooms,
-      numOfBeds: beds,
-      numOfBathrooms: bathrooms,
+      maxGuestCount: guests,
+      bedroomCount: bedrooms,
+      bathroomCount: beds,
+      bedCount: bathrooms,
     });
   };
 

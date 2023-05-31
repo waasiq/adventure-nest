@@ -46,6 +46,14 @@ const Navbar: React.FC = () => {
           </p>
         </div>
         <div className="hidden md:block">
+          <p
+            className="text-gray-600 font-medium cursor-pointer"
+            // onClick={redirectToHost}
+          >
+            My Bookings
+          </p>
+        </div>
+        <div className="hidden md:block">
           <GrLanguage className="text-gray-600 text-lg" />
         </div>
         <div className="hidden md:block">
