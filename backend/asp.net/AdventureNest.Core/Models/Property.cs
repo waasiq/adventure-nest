@@ -32,17 +32,25 @@ namespace AdventureNest.Core.Models
 
         public int BedCount { get; set; }
 
-        public bool IsDishwasher { get; set; }
-
-        public bool IsFridge { get; set; }
+        public bool IsRefrigerator { get; set; }
 
         public bool IsTv { get; set; }
 
-        public bool IsSofa { get; set; }
+        public bool IsCouch { get; set; }
 
-        public bool IsTable { get; set; }
+        public bool IsBed{ get; set; }
 
-        public bool IsChair { get; set; }
+        public bool IsGasStove { get; set; }
+
+        public bool IsBlender { get; set; }
+
+        public bool IsCoffeeMaker { get; set; }
+
+        public bool IsMicrowave { get; set; }
+
+        public bool IsMixingBowl { get; set; }
+
+        public bool IsWashingMachine { get; set; }
 
         [ForeignKey("OwnerId")]
         public User User { get; set; }

@@ -3,7 +3,7 @@ import torch
 def detectObj(image_paths):
     print("detectObj")
     label_dict = {
-        0: " Blender",
+        0: "Blender",
         1: "Coffeemaker",
         2: "Microwave oven",
         3: "Gas stove",

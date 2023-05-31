@@ -32,7 +32,8 @@ const Home: React.FC = () => {
         const fetchData = async () => {
           const { data } = await getAPIHandler("/publications/publications-with-property");
           const propertyResponse: IPropertyResponse = data as IPropertyResponse;
-  
+          console.log(propertyResponse.data);
+          
           propertyResponse.data.forEach((property: any) => {
             const card: CardProps = {
               id: property.id,

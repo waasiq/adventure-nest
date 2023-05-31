@@ -72,10 +72,10 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 1,
-                            BookingDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(6986),
+                            BookingDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8147),
                             BookingStatus = "Booked",
                             CheckInDate = new DateTime(2023, 8, 11, 10, 30, 0, 0, DateTimeKind.Unspecified),
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(6984),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8146),
                             CustomerId = 2,
                             DepartureDate = new DateTime(2023, 8, 17, 10, 30, 0, 0, DateTimeKind.Unspecified),
                             PricePerDay = 1000m,
@@ -85,10 +85,10 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 2,
-                            BookingDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7090),
+                            BookingDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8250),
                             BookingStatus = "Booked",
                             CheckInDate = new DateTime(2023, 9, 5, 10, 30, 0, 0, DateTimeKind.Unspecified),
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7089),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8250),
                             CustomerId = 3,
                             DepartureDate = new DateTime(2023, 9, 9, 10, 30, 0, 0, DateTimeKind.Unspecified),
                             PricePerDay = 4000m,
@@ -98,10 +98,10 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 3,
-                            BookingDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7102),
+                            BookingDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8262),
                             BookingStatus = "Booked",
                             CheckInDate = new DateTime(2023, 10, 21, 10, 30, 0, 0, DateTimeKind.Unspecified),
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7102),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8262),
                             CustomerId = 1,
                             DepartureDate = new DateTime(2023, 10, 27, 10, 30, 0, 0, DateTimeKind.Unspecified),
                             PricePerDay = 800m,
@@ -111,10 +111,10 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 4,
-                            BookingDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7113),
+                            BookingDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8272),
                             BookingStatus = "Booked",
                             CheckInDate = new DateTime(2023, 12, 1, 10, 30, 0, 0, DateTimeKind.Unspecified),
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7113),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8271),
                             CustomerId = 3,
                             DepartureDate = new DateTime(2023, 8, 10, 10, 30, 0, 0, DateTimeKind.Unspecified),
                             PricePerDay = 1000m,
@@ -124,10 +124,10 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 5,
-                            BookingDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7124),
+                            BookingDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8281),
                             BookingStatus = "Booked",
                             CheckInDate = new DateTime(2023, 8, 11, 10, 30, 0, 0, DateTimeKind.Unspecified),
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7124),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8281),
                             CustomerId = 1,
                             DepartureDate = new DateTime(2023, 8, 17, 10, 30, 0, 0, DateTimeKind.Unspecified),
                             PricePerDay = 2500m,
@@ -137,10 +137,10 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 6,
-                            BookingDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7135),
+                            BookingDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8291),
                             BookingStatus = "Booked",
                             CheckInDate = new DateTime(2023, 5, 8, 10, 30, 0, 0, DateTimeKind.Unspecified),
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7135),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8290),
                             CustomerId = 2,
                             DepartureDate = new DateTime(2023, 5, 12, 10, 30, 0, 0, DateTimeKind.Unspecified),
                             PricePerDay = 200m,
@@ -189,22 +189,34 @@ namespace AdventureNest.Repository.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("IsChair")
+                    b.Property<bool>("IsBed")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsDishwasher")
+                    b.Property<bool>("IsBlender")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsFridge")
+                    b.Property<bool>("IsCoffeeMaker")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsSofa")
+                    b.Property<bool>("IsCouch")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsTable")
+                    b.Property<bool>("IsGasStove")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsMicrowave")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsMixingBowl")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsRefrigerator")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsTv")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsWashingMachine")
                         .HasColumnType("bit");
 
                     b.Property<float>("Latitude")
@@ -253,13 +265,17 @@ namespace AdventureNest.Repository.Migrations
                             BookingType = "Full House",
                             City = "Sakarya",
                             Country = "Turkey",
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7296),
-                            IsChair = true,
-                            IsDishwasher = true,
-                            IsFridge = true,
-                            IsSofa = true,
-                            IsTable = true,
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8455),
+                            IsBed = true,
+                            IsBlender = true,
+                            IsCoffeeMaker = true,
+                            IsCouch = true,
+                            IsGasStove = true,
+                            IsMicrowave = true,
+                            IsMixingBowl = true,
+                            IsRefrigerator = true,
                             IsTv = true,
+                            IsWashingMachine = true,
                             Latitude = 0f,
                             Longtitude = 0f,
                             MaxGuestCount = 15,
@@ -278,13 +294,17 @@ namespace AdventureNest.Repository.Migrations
                             BookingType = "Villa",
                             City = "Miami",
                             Country = "USA",
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7302),
-                            IsChair = true,
-                            IsDishwasher = true,
-                            IsFridge = true,
-                            IsSofa = true,
-                            IsTable = true,
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8463),
+                            IsBed = true,
+                            IsBlender = true,
+                            IsCoffeeMaker = true,
+                            IsCouch = true,
+                            IsGasStove = true,
+                            IsMicrowave = true,
+                            IsMixingBowl = true,
+                            IsRefrigerator = true,
                             IsTv = true,
+                            IsWashingMachine = true,
                             Latitude = 0f,
                             Longtitude = 0f,
                             MaxGuestCount = 10,
@@ -303,13 +323,17 @@ namespace AdventureNest.Repository.Migrations
                             BookingType = "Full House",
                             City = "Istanbul",
                             Country = "Turkey",
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7304),
-                            IsChair = true,
-                            IsDishwasher = true,
-                            IsFridge = true,
-                            IsSofa = true,
-                            IsTable = true,
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8467),
+                            IsBed = true,
+                            IsBlender = true,
+                            IsCoffeeMaker = true,
+                            IsCouch = true,
+                            IsGasStove = true,
+                            IsMicrowave = true,
+                            IsMixingBowl = true,
+                            IsRefrigerator = true,
                             IsTv = true,
+                            IsWashingMachine = true,
                             Latitude = 0f,
                             Longtitude = 0f,
                             MaxGuestCount = 4,
@@ -328,13 +352,17 @@ namespace AdventureNest.Repository.Migrations
                             BookingType = "Full House",
                             City = "Hithadhoo",
                             Country = "Maldives",
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7306),
-                            IsChair = true,
-                            IsDishwasher = false,
-                            IsFridge = true,
-                            IsSofa = false,
-                            IsTable = true,
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8471),
+                            IsBed = true,
+                            IsBlender = true,
+                            IsCoffeeMaker = true,
+                            IsCouch = true,
+                            IsGasStove = true,
+                            IsMicrowave = true,
+                            IsMixingBowl = true,
+                            IsRefrigerator = true,
                             IsTv = true,
+                            IsWashingMachine = true,
                             Latitude = 0f,
                             Longtitude = 0f,
                             MaxGuestCount = 4,
@@ -353,13 +381,17 @@ namespace AdventureNest.Repository.Migrations
                             BookingType = "Full House",
                             City = "Cagliari",
                             Country = "Italy",
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7308),
-                            IsChair = true,
-                            IsDishwasher = true,
-                            IsFridge = true,
-                            IsSofa = true,
-                            IsTable = true,
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8474),
+                            IsBed = true,
+                            IsBlender = true,
+                            IsCoffeeMaker = true,
+                            IsCouch = true,
+                            IsGasStove = true,
+                            IsMicrowave = true,
+                            IsMixingBowl = true,
+                            IsRefrigerator = true,
                             IsTv = true,
+                            IsWashingMachine = true,
                             Latitude = 0f,
                             Longtitude = 0f,
                             MaxGuestCount = 3,
@@ -378,13 +410,17 @@ namespace AdventureNest.Repository.Migrations
                             BookingType = "Single Room",
                             City = "Paris",
                             Country = "France",
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(7311),
-                            IsChair = false,
-                            IsDishwasher = true,
-                            IsFridge = true,
-                            IsSofa = true,
-                            IsTable = false,
-                            IsTv = false,
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(8476),
+                            IsBed = true,
+                            IsBlender = true,
+                            IsCoffeeMaker = true,
+                            IsCouch = true,
+                            IsGasStove = true,
+                            IsMicrowave = true,
+                            IsMixingBowl = true,
+                            IsRefrigerator = true,
+                            IsTv = true,
+                            IsWashingMachine = true,
                             Latitude = 0f,
                             Longtitude = 0f,
                             MaxGuestCount = 2,
@@ -440,7 +476,7 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(6693),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(7931),
                             Description = "Villa with Sapanca Lake view",
                             IsActive = true,
                             Price = 1000m,
@@ -450,7 +486,7 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(6705),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(7944),
                             Description = "Villa with Miami Beach view",
                             IsActive = true,
                             Price = 4000m,
@@ -460,7 +496,7 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(6706),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(7946),
                             Description = "A beautiful house in the center of Kadıköy",
                             IsActive = true,
                             Price = 800m,
@@ -470,7 +506,7 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(6707),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(7948),
                             Description = "Ultra luxury all-inclusive accommodation by the ocean in the Maldives",
                             IsActive = true,
                             Price = 1000m,
@@ -480,7 +516,7 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(6708),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(7949),
                             Description = "A hotel room in the unique beauty of the island of Sardinia",
                             IsActive = true,
                             Price = 2500m,
@@ -490,7 +526,7 @@ namespace AdventureNest.Repository.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 4, 18, 3, 8, 55, 844, DateTimeKind.Local).AddTicks(6709),
+                            CreatedDate = new DateTime(2023, 5, 27, 16, 0, 52, 779, DateTimeKind.Local).AddTicks(7950),
                             Description = "One room house",
                             IsActive = true,
                             Price = 200m,
@@ -568,8 +604,8 @@ namespace AdventureNest.Repository.Migrations
                             Email = "string1@hotmail.com",
                             FirstName = "string1",
                             LastName = "string1",
-                            PasswordHash = new byte[] { 130, 109, 18, 54, 121, 200, 147, 55, 202, 54, 215, 243, 8, 250, 83, 231, 97, 28, 100, 90, 147, 234, 129, 73, 30, 234, 6, 122, 65, 255, 148, 207, 76, 89, 43, 249, 29, 128, 66, 177, 102, 95, 114, 17, 135, 166, 75, 54, 55, 177, 87, 178, 54, 106, 54, 201, 229, 37, 238, 211, 200, 122, 75, 103 },
-                            PasswordSalt = new byte[] { 57, 233, 184, 221, 158, 69, 126, 55, 111, 94, 80, 148, 112, 53, 218, 94, 238, 189, 165, 62, 108, 99, 57, 215, 14, 84, 10, 213, 96, 123, 250, 221, 62, 226, 215, 28, 230, 34, 196, 95, 178, 215, 163, 13, 244, 69, 238, 43, 24, 44, 129, 236, 216, 125, 25, 254, 193, 55, 224, 39, 56, 195, 94, 193, 226, 155, 233, 18, 64, 62, 161, 71, 190, 145, 187, 60, 150, 119, 241, 66, 48, 58, 213, 159, 125, 170, 18, 186, 193, 32, 92, 1, 47, 206, 228, 218, 27, 133, 163, 59, 95, 182, 88, 229, 142, 175, 143, 46, 186, 37, 29, 115, 225, 9, 16, 180, 134, 222, 25, 45, 25, 237, 36, 191, 194, 7, 69, 106 },
+                            PasswordHash = new byte[] { 133, 89, 125, 3, 70, 216, 35, 247, 178, 168, 221, 126, 254, 154, 181, 220, 128, 139, 212, 176, 160, 73, 252, 129, 42, 20, 85, 177, 55, 85, 247, 68, 125, 31, 13, 168, 183, 19, 18, 15, 105, 181, 23, 182, 68, 220, 6, 48, 159, 50, 2, 57, 122, 9, 80, 96, 177, 124, 93, 71, 104, 192, 103, 31 },
+                            PasswordSalt = new byte[] { 136, 214, 117, 70, 122, 243, 215, 176, 31, 88, 36, 244, 154, 148, 67, 87, 77, 47, 104, 99, 114, 185, 62, 127, 45, 79, 129, 173, 136, 70, 106, 138, 70, 141, 19, 218, 195, 159, 117, 152, 182, 96, 123, 255, 88, 127, 23, 222, 72, 220, 37, 156, 14, 113, 214, 93, 178, 153, 35, 56, 210, 101, 106, 129, 84, 188, 24, 168, 25, 47, 235, 136, 44, 229, 255, 210, 49, 45, 173, 17, 69, 54, 218, 239, 169, 50, 224, 160, 67, 168, 150, 216, 169, 214, 8, 148, 134, 140, 255, 153, 214, 140, 65, 99, 154, 88, 17, 79, 145, 246, 135, 230, 71, 158, 230, 214, 65, 185, 103, 141, 56, 243, 25, 137, 189, 245, 204, 142 },
                             Picture = "string1"
                         },
                         new
@@ -579,8 +615,8 @@ namespace AdventureNest.Repository.Migrations
                             Email = "string2@hotmail.com",
                             FirstName = "string2",
                             LastName = "string2",
-                            PasswordHash = new byte[] { 74, 0, 241, 138, 72, 244, 201, 9, 44, 87, 250, 23, 107, 32, 106, 192, 113, 35, 26, 166, 228, 50, 12, 242, 87, 187, 193, 89, 129, 197, 83, 192, 1, 40, 0, 61, 15, 225, 153, 127, 33, 37, 240, 8, 220, 213, 75, 157, 235, 69, 195, 55, 59, 170, 133, 172, 169, 136, 166, 167, 202, 70, 156, 234 },
-                            PasswordSalt = new byte[] { 193, 150, 191, 164, 177, 115, 12, 74, 80, 205, 138, 188, 133, 172, 80, 229, 137, 90, 129, 252, 159, 50, 5, 252, 246, 183, 229, 11, 92, 189, 45, 149, 244, 36, 14, 150, 72, 36, 226, 159, 250, 120, 93, 224, 138, 140, 24, 56, 248, 212, 69, 84, 249, 31, 84, 253, 253, 150, 5, 184, 163, 32, 115, 1, 187, 253, 182, 96, 31, 251, 90, 209, 176, 247, 218, 7, 54, 251, 85, 190, 214, 232, 158, 41, 49, 153, 57, 221, 53, 51, 108, 157, 10, 8, 120, 150, 206, 238, 208, 49, 119, 50, 210, 139, 223, 136, 20, 234, 118, 97, 85, 83, 233, 173, 185, 122, 173, 207, 205, 9, 174, 255, 81, 10, 192, 142, 211, 246 },
+                            PasswordHash = new byte[] { 148, 140, 250, 240, 194, 206, 150, 229, 84, 213, 192, 158, 150, 182, 209, 186, 33, 167, 231, 149, 86, 123, 10, 146, 11, 142, 131, 164, 235, 23, 130, 86, 195, 79, 117, 70, 18, 158, 79, 132, 202, 16, 242, 10, 218, 65, 7, 84, 245, 52, 20, 119, 172, 48, 129, 81, 9, 16, 240, 244, 198, 232, 75, 27 },
+                            PasswordSalt = new byte[] { 56, 159, 183, 5, 52, 242, 219, 6, 155, 139, 68, 4, 120, 73, 185, 57, 171, 25, 194, 195, 93, 124, 100, 69, 180, 61, 96, 51, 176, 159, 178, 69, 176, 199, 73, 176, 140, 29, 102, 4, 254, 218, 121, 149, 40, 94, 159, 39, 233, 1, 215, 173, 72, 68, 87, 211, 20, 8, 76, 210, 57, 99, 134, 96, 126, 33, 28, 195, 60, 119, 2, 14, 38, 142, 20, 35, 133, 247, 9, 184, 145, 145, 196, 76, 24, 33, 174, 100, 194, 32, 127, 170, 240, 163, 182, 50, 226, 182, 106, 20, 150, 82, 52, 246, 97, 226, 107, 61, 29, 4, 16, 9, 229, 31, 241, 149, 202, 39, 0, 184, 168, 248, 27, 159, 182, 111, 114, 105 },
                             Picture = "string2"
                         },
                         new
@@ -590,8 +626,8 @@ namespace AdventureNest.Repository.Migrations
                             Email = "string3@hotmail.com",
                             FirstName = "string3",
                             LastName = "string3",
-                            PasswordHash = new byte[] { 37, 3, 169, 17, 30, 11, 78, 206, 168, 12, 182, 210, 144, 134, 130, 60, 29, 122, 137, 146, 31, 60, 129, 19, 21, 38, 101, 139, 229, 9, 203, 166, 71, 77, 109, 48, 102, 248, 79, 181, 237, 29, 42, 86, 73, 41, 174, 159, 50, 192, 105, 148, 233, 239, 227, 144, 22, 92, 0, 52, 31, 189, 13, 52 },
-                            PasswordSalt = new byte[] { 116, 46, 6, 76, 4, 66, 203, 20, 149, 120, 78, 164, 192, 209, 175, 219, 134, 10, 184, 7, 246, 9, 119, 65, 24, 195, 20, 77, 150, 167, 68, 231, 100, 95, 160, 95, 28, 20, 101, 9, 148, 78, 0, 112, 213, 94, 45, 37, 46, 30, 3, 205, 57, 191, 173, 239, 144, 84, 50, 220, 5, 232, 172, 57, 161, 164, 179, 156, 252, 13, 93, 138, 121, 155, 37, 78, 217, 97, 101, 243, 116, 21, 225, 229, 241, 201, 109, 216, 188, 236, 113, 126, 27, 144, 41, 221, 39, 179, 186, 8, 62, 238, 194, 151, 105, 246, 22, 75, 206, 175, 173, 196, 117, 109, 156, 223, 42, 34, 23, 241, 224, 98, 148, 11, 105, 83, 85, 178 },
+                            PasswordHash = new byte[] { 24, 172, 120, 216, 222, 81, 93, 118, 34, 73, 252, 0, 16, 90, 223, 137, 11, 54, 126, 177, 253, 136, 149, 105, 60, 145, 71, 10, 254, 231, 97, 237, 41, 213, 36, 3, 237, 242, 71, 61, 17, 72, 131, 96, 173, 210, 166, 220, 172, 252, 225, 43, 42, 67, 63, 126, 108, 163, 46, 77, 255, 149, 51, 152 },
+                            PasswordSalt = new byte[] { 63, 153, 161, 111, 123, 5, 88, 232, 206, 76, 87, 169, 210, 166, 212, 197, 106, 61, 125, 225, 39, 217, 106, 71, 49, 43, 38, 19, 60, 93, 129, 237, 90, 32, 238, 224, 119, 5, 11, 200, 89, 66, 94, 168, 180, 152, 34, 251, 75, 139, 205, 17, 91, 16, 70, 207, 21, 185, 12, 22, 156, 71, 239, 84, 134, 137, 55, 248, 4, 115, 44, 197, 17, 213, 2, 222, 101, 203, 205, 220, 6, 141, 246, 138, 58, 54, 78, 17, 169, 100, 44, 146, 62, 213, 164, 204, 75, 92, 32, 122, 175, 65, 8, 110, 223, 145, 200, 248, 123, 26, 125, 84, 152, 222, 123, 185, 196, 113, 137, 36, 155, 208, 243, 75, 148, 72, 200, 102 },
                             Picture = "string3"
                         });
                 });

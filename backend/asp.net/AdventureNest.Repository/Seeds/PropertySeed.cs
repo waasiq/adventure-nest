@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AdventureNest.Core.Models;
 
 namespace AdventureNest.Repository.Seeds
@@ -35,12 +30,16 @@ namespace AdventureNest.Repository.Seeds
                     BedCount = 12,
                     BedroomCount = 6,
                     MaxGuestCount = 15,
-                    IsChair = true,
-                    IsDishwasher = true,
-                    IsFridge = true,
-                    IsSofa = true,
-                    IsTable = true,
-                    IsTv = true
+                    IsRefrigerator = true,
+                    IsTv = true,
+                    IsCouch = true,
+                    IsBed = true,
+                    IsGasStove = true,
+                    IsBlender = true,
+                    IsCoffeeMaker = true,
+                    IsMicrowave = true,
+                    IsMixingBowl = true,
+                    IsWashingMachine = true
                 },
                 new Property
                 {
@@ -60,12 +59,16 @@ namespace AdventureNest.Repository.Seeds
                     BedCount = 8,
                     BedroomCount = 5,
                     MaxGuestCount = 10,
-                    IsChair = true,
-                    IsDishwasher = true,
-                    IsFridge = true,
-                    IsSofa = true,
-                    IsTable = true,
-                    IsTv = true
+                    IsRefrigerator = true,
+                    IsTv = true,
+                    IsCouch = true,
+                    IsBed = true,
+                    IsGasStove = true,
+                    IsBlender = true,
+                    IsCoffeeMaker = true,
+                    IsMicrowave = true,
+                    IsMixingBowl = true,
+                    IsWashingMachine = true
                 },
                 new Property
                 {
@@ -85,12 +88,16 @@ namespace AdventureNest.Repository.Seeds
                     BedCount = 3,
                     BedroomCount = 4,
                     MaxGuestCount = 4,
-                    IsChair = true,
-                    IsDishwasher = true,
-                    IsFridge = true,
-                    IsSofa = true,
-                    IsTable = true,
-                    IsTv = true
+                    IsRefrigerator = true,
+                    IsTv = true,
+                    IsCouch = true,
+                    IsBed = true,
+                    IsGasStove = true,
+                    IsBlender = true,
+                    IsCoffeeMaker = true,
+                    IsMicrowave = true,
+                    IsMixingBowl = true,
+                    IsWashingMachine = true
                 },
                 new Property
                 {
@@ -110,12 +117,16 @@ namespace AdventureNest.Repository.Seeds
                     BedCount = 2,
                     BedroomCount = 2,
                     MaxGuestCount = 4,
-                    IsChair = true,
-                    IsDishwasher = false,
-                    IsFridge = true,
-                    IsSofa = false,
-                    IsTable = true,
-                    IsTv = true
+                    IsRefrigerator = true,
+                    IsTv = true,
+                    IsCouch = true,
+                    IsBed = true,
+                    IsGasStove = true,
+                    IsBlender = true,
+                    IsCoffeeMaker = true,
+                    IsMicrowave = true,
+                    IsMixingBowl = true,
+                    IsWashingMachine = true
                 },
                 new Property
                 {
@@ -135,12 +146,16 @@ namespace AdventureNest.Repository.Seeds
                     BedCount = 2,
                     BedroomCount = 2,
                     MaxGuestCount = 3,
-                    IsChair = true,
-                    IsDishwasher = true,
-                    IsFridge = true,
-                    IsSofa = true,
-                    IsTable = true,
-                    IsTv = true
+                    IsRefrigerator = true,
+                    IsTv = true,
+                    IsCouch = true,
+                    IsBed = true,
+                    IsGasStove = true,
+                    IsBlender = true,
+                    IsCoffeeMaker = true,
+                    IsMicrowave = true,
+                    IsMixingBowl = true,
+                    IsWashingMachine = true
                 },
                 new Property
                 {
@@ -160,12 +175,16 @@ namespace AdventureNest.Repository.Seeds
                     BedCount = 1,
                     BedroomCount = 1,
                     MaxGuestCount = 2,
-                    IsChair = false,
-                    IsDishwasher = true,
-                    IsFridge = true,
-                    IsSofa = true,
-                    IsTable = false,
-                    IsTv = false
+                    IsRefrigerator = true,
+                    IsTv = true,
+                    IsCouch = true,
+                    IsBed = true,
+                    IsGasStove = true,
+                    IsBlender = true,
+                    IsCoffeeMaker = true,
+                    IsMicrowave = true,
+                    IsMixingBowl = true,
+                    IsWashingMachine = true
                 }
                 );
         }
