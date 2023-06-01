@@ -27,7 +27,7 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route
-                path="/property-details/:id"
+                path="/property-details/:id/:propertyID"
                 element={
                 <PublicationProvider>
                   <PropertyDetails />

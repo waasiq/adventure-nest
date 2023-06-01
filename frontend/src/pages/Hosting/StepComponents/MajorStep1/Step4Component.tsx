@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import getGeoCodeData from "../../../../utils/LocationSearch";
 import LocalMap from "../../../../components/others/Map/LocalMap";
 import { HostContext } from "../../../../context/HostingContext";
+import { motion } from "framer-motion";
 
 interface ICoord {
   latitude: number;
@@ -31,12 +32,22 @@ const Step4Component: React.FC = () => {
 
   return (
     <React.Fragment>
-      <h1 className="mt-4 flex flex-col items-center text-3xl font-bold mb-4">
-        Please type your address
-      </h1>
+      <motion.h1
+        className="mt-4 flex flex-col items-center text-green-900 text-3xl font-bold mb-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Please type your address and give the price per night
+      </motion.h1>
       <div className="flex flex-col lg:flex-row my-12">
         <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="rounded-lg w-full md:w-96 h-96 flex flex-col justify-center items-center">
+          <motion.div
+            className="rounded-lg w-full md:w-96 h-96 flex flex-col justify-center items-center"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <input
               type="text"
               className="w-full md:w-80 p-2  border-2 border-gray-300 rounded-lg mb-4"
@@ -44,22 +55,41 @@ const Step4Component: React.FC = () => {
               value={host?.address ? host?.address : address}
               onChange={(e) => setAddress(e.currentTarget.value)}
             />
-            <button
+            <motion.button
               className="py-2 px-10 bg-emerald-500 text-white rounded-lg"
               onClick={handleSubmit}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Submit
-            </button>
-          </div>
+            </motion.button>
+
+            <div className="flex flex-col items-center mt-4">
+              <label className="text-gray-600 mb-2">Price per night in TL</label>
+              <input
+                type="number"
+                className="w-24 p-2 border-2 border-gray-300 rounded-lg"
+                value={host?.price ? host?.price : 0}
+                onChange={(e) =>
+                  setHost({ ...host, price: parseInt(e.currentTarget.value) })
+                }
+              />
+            </div>
+          </motion.div>
         </div>
 
         <div className="w-full lg:w-1/2 flex justify-center">
-          <div className="w-96 h-96">
-            <LocalMap 
+          <motion.div
+            className="w-96 h-96"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <LocalMap
               latitude={host?.latitude ? host?.latitude : coord?.latitude}
               longitude={host?.longitude ? host?.longitude : coord?.longitude}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </React.Fragment>

@@ -10,20 +10,22 @@ import { IPublication, IProperty, IResponse } from "../types/types";
 
 
 const PropertyDetails: React.FC = () => {
-  const { id } = useParams<{ id: string }>()
+  const { id , propertyID } = useParams<{ id: string, propertyID: string }>()
   const { publication, setPublication, property, setProperty } = useContext(PublicationContext);
 
   useEffect(() => {
     const fetchData = async () => {
       try{
         const getPublication = await getAPIHandler("/publications/" + id);
-        const getProperty  = await getAPIHandler("/properties/" + id);
-        
+        const getProperty  = await getAPIHandler("/properties/" + propertyID);
+
         const getPublicationRes: IResponse = getPublication.data as IResponse;
         const getPropertyRes: IResponse = getProperty.data as IResponse;
-
+        
         setProperty(getPropertyRes.data as IProperty);
         setPublication(getPublicationRes.data as IPublication);
+
+        console.log(getPropertyRes.data as IProperty);
       } catch {
         console.log("Error fetching property details");
       }
@@ -66,7 +68,6 @@ const PropertyDetails: React.FC = () => {
         </div>
       )}
       <Footer />
-
     </React.Fragment>
   );
 };

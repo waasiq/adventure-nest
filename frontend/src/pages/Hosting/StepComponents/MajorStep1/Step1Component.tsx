@@ -1,18 +1,38 @@
-import React, { useContext } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 const Step1Component: React.FC = () => {
   return (
     <React.Fragment>
       <div className="flex">
         <div className="w-3/5 p-16">
-          <h1 className="text-4xl font-bold mb-4">Step 1</h1>
-          <h1 className="text-6xl font-bold mb-8">Tell us about your place</h1>
-          <p className="text-gray-600 text-xl mb-8">
-            In this step, we{`'`}ll ask you which type of property you have and if
-            guests will book the entire place or just a room. Then let us know
-            the location and how many guests can stay.
-          </p>
-        </div>
+        <motion.h1
+          className="text-4xl text-red-500 font-bold mb-4"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Step 1
+        </motion.h1>
+        <motion.h1
+          className="text-6xl text-yellow-500 font-bold mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          Tell us about your place
+        </motion.h1>
+        <motion.p
+          className="text-gray-600 text-xl mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          In this step, we{"'"}ll ask you which type of property you have and if
+          guests will book the entire place or just a room. Then let us know the
+          location and how many guests can stay.
+        </motion.p>
+      </div>
         <div className="w-2/5">
           <video
             className="w-full h-full"

@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const Step8Component: React.FC = () => {
   const { host, setHost } = useContext(HostContext);
   const { user } = useContext(CurrentUserContext);
-  const [userData, setUserData] = useState({ name: "", country: "", city: "" });
+  const [userData, setUserData] = useState({ name: "", country: "", city: "", description: "" });
   const [showButton, setShowButton] = useState(false);
   const [detectedObj, setDetectedObj] = useState<string[]>([]);
 
@@ -73,7 +73,7 @@ const Step8Component: React.FC = () => {
         userID = usersData[i].id;
       }
     }
-  
+
     // All the objects from host context are not being sent to the API so that is why 
     // I am creating a new object with only the properties that I need
     const transformedHost = {
@@ -105,14 +105,35 @@ const Step8Component: React.FC = () => {
     };
 
     console.log(transformedHost);
-    const postRes = await postAPIHandler("/properties", transformedHost);
+    await postAPIHandler("/properties", transformedHost);
+
+    const getProperty = await getAPIHandler("/properties");
+    const res2: IResponse = getProperty.data as IResponse;
+
+    // get the property id of the property that was just created
+    const propertyID = res2.data[res2.data.length - 1].id as any;
+    console.log(propertyID);
+
+    // Due to backend design we also need to add the property to publication
+    const transformedPublication = {
+      propertyID: propertyID,
+      title: userData.name,
+      description: userData.description,
+      price: host?.price,
+      isActive: true,
+      createdDate: new Date().toISOString(),
+    };
+    
+    console.log(transformedPublication);
+    await postAPIHandler("/publications", transformedPublication);
+
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setUserData((prevData) => ({ ...prevData, [name]: value }));
 
-    if (userData.name && userData.country && userData.city) {
+    if (userData.name && userData.country && userData.city && userData.description) {
       setShowButton(true);
     }
   };
@@ -140,7 +161,7 @@ const Step8Component: React.FC = () => {
           </span>
         </motion.h1>
       </div>
-      <div className="flex-1 p-16">
+      <div className="flex-1 p-10">
         <p className="text-gray-600 text-xl mb-8">
           <label className="block mb-4">
             The name you would like to put on your listing:
@@ -148,6 +169,16 @@ const Step8Component: React.FC = () => {
               type="text"
               name="name"
               value={userData.name}
+              onChange={handleInputChange}
+              className="border border-gray-300 rounded px-3 py-2 mt-1 w-full"
+            />
+          </label>
+          <label className="block mb-4">
+            A cheesy description: 
+            <input
+              type="text"
+              name="description"
+              value={userData.description}
               onChange={handleInputChange}
               className="border border-gray-300 rounded px-3 py-2 mt-1 w-full"
             />
@@ -185,7 +216,7 @@ const Step8Component: React.FC = () => {
           {showButton && (
             <motion.button
               onClick={sendToAPI}
-              className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-4 px-4 my-4 rounded-full"
+              className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-4 px-4  rounded-full"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.6 }}

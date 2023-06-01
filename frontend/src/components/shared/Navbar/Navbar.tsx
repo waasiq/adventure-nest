@@ -3,13 +3,21 @@ import { GrLanguage } from "react-icons/gr";
 import Logo from "../../../imgs//logos/logo_transparent.png";
 import UserDropdown from "./Dropdown/UserDropdown";
 import { useNavigate } from "react-router-dom";
+import { CurrentUserContext } from "../../../context/CurrentUserContext";
 
 const Navbar: React.FC = () => {
+  const { user } = React.useContext(CurrentUserContext);
+
   // Redirection From Navbar
   const navigate = useNavigate();
   const redirectToHome = () => {
     navigate("/");
   };
+
+  const redirectToBookings = () => {
+    navigate("/bookings");
+  };
+
   const redirectToHost = () => {
     navigate("/host");
   };
@@ -35,24 +43,29 @@ const Navbar: React.FC = () => {
         {/* !Insert here later on */}
       </div>
 
-      {/* Right side of navbar */}
+
       <div className="flex items-center space-x-4 mx-10">
-        <div className="hidden md:block">
-          <p
-            className="text-gray-600 font-medium cursor-pointer"
-            onClick={redirectToHost}
-          >
-            Host an Adventure
-          </p>
-        </div>
-        <div className="hidden md:block">
-          <p
-            className="text-gray-600 font-medium cursor-pointer"
-            // onClick={redirectToHost}
-          >
-            My Bookings
-          </p>
-        </div>
+      {user && (
+        <React.Fragment>
+          <div className="hidden md:block">
+            <p
+              className="text-gray-600 font-medium cursor-pointer"
+              onClick={redirectToHost}
+            >
+              Host an Adventure
+            </p>
+          </div>
+          <div className="hidden md:block">
+            <p
+              className="text-gray-600 font-medium cursor-pointer"
+              onClick={redirectToBookings}
+            >
+              My Bookings
+            </p>
+          </div>
+        </React.Fragment>
+      )}
+
         <div className="hidden md:block">
           <GrLanguage className="text-gray-600 text-lg" />
         </div>

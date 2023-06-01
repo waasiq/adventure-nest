@@ -5,6 +5,7 @@ export interface IUser {
     email: string;
     picture?: string;
     id?: string;
+    [key: string]: any; // Add an index signature
 }
   
 
@@ -15,6 +16,7 @@ export interface IPublication {
     isActive: boolean;
     title: string;
     price: number;
+    [key: string]: any; // Add an index signature
 }
   
 export interface IProperty { 
@@ -40,6 +42,7 @@ export interface IProperty {
     isTable: boolean;
     isChair: boolean;
     createdDate: string;
+    [key: string]: any; // Add an index signature
 }
   
 export  interface IResponse {

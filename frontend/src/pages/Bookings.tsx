@@ -38,7 +38,6 @@ const Bookings = () => {
         };
 
         fetchBookings();
-        console.log(bookings);
     }, []);
 
     return (

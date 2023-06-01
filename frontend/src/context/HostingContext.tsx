@@ -31,6 +31,8 @@ export interface IHost {
     latitude?: number;
     longitude?: number;
 
+
+    price?: number;
     homeType?: string;
     placeType?: string;
     selectedHomeIcon?: string;

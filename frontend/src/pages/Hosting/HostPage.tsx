@@ -15,31 +15,36 @@ const HostPage: React.FC = () => {
   return (
     <React.Fragment>
       <div className="flex my-24 flex-row justify-center items-center">
-      <div className="p-14">
-        <h1 className="text-center text-3xl font-bold text-black-500">
-          {letters.map((letter, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              {letter}
-            </motion.span>
-          ))}
-        </h1>
-        <motion.p
-          className="text-center text-gray-600"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: letters.length * 0.1 }}
-        >
-          and earn money while you{"'"}re at it
-        </motion.p>
-      </div>
-        <div className="rounded-lg w-96 h-96">
-          <LocalMap />
+        <div className="p-14">
+          <h1 className="text-center text-3xl font-bold text-black-500">
+            {letters.map((letter, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.05 }}
+              >
+                {letter}
+              </motion.span>
+            ))}
+          </h1>
+          <motion.p
+            className="text-center text-gray-600"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: letters.length * 0.1 }}
+          >
+            and earn money while you{"'"}re at it
+          </motion.p>
         </div>
+        <motion.div
+          className="rounded-lg w-96 h-96"
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <LocalMap />
+        </motion.div>
       </div>
 
       <div className="flex justify-center">
