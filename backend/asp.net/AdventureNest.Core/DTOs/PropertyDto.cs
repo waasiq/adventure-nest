@@ -19,10 +19,9 @@ namespace AdventureNest.Core.DTOs
         public int BedroomCount { get; set; }
         public int BathroomCount { get; set; }
         public int BedCount { get; set; }
-          public bool IsRefrigerator { get; set; }
-
+        public bool IsRefrigerator { get; set; }
         public bool IsTv { get; set; }
-
+        
         public bool IsCouch { get; set; }
 
         public bool IsBed{ get; set; }

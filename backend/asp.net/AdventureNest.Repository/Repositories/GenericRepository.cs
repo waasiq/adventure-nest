@@ -20,7 +20,6 @@ namespace AdventureNest.Repository.Repositories
             _dbSet = _context.Set<TEntity>();
         }
 
-
         public async Task AddAsync(TEntity entity)
         {
             await _dbSet.AddAsync(entity);

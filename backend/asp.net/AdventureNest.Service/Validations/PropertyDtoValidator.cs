@@ -63,25 +63,6 @@ namespace AdventureNest.Service.Validations
                 .WithMessage("Bed count must have a value.")
                 .InclusiveBetween(0, int.MaxValue)
                 .WithMessage("Bed count must be 0 or greater.");
-
-            //RuleFor(x => x.IsDishwasher).NotEmpty().NotNull()
-            //    .WithMessage("Dishwasher existing information is must.");
-
-            //RuleFor(x => x.IsFridge).NotEmpty().NotNull()
-            //    .WithMessage("Fridge existing information is must.");
-
-            //RuleFor(x => x.IsTv).NotEmpty().NotNull()
-            //    .WithMessage("Tv existing information is must.");
-
-            //RuleFor(x => x.IsSofa).NotEmpty().NotNull()
-            //    .WithMessage("Sofa existing information is must.");
-
-            //RuleFor(x => x.IsTable).NotEmpty().NotNull()
-            //    .WithMessage("Table existing information is must.");
-
-            //RuleFor(x => x.IsChair).NotEmpty().NotNull()
-            //    .WithMessage("Chair existing information is must.");
-
         }
     }
 }
