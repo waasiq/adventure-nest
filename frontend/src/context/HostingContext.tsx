@@ -9,6 +9,8 @@ export interface IHost {
     country?: string;
     city?: string; 
     address?: string;
+    description?: string;
+
     propertyType?: string;
     bookingType?: string;
     photographsPathList?: string[];
@@ -27,7 +29,8 @@ export interface IHost {
     isMicrowave?: boolean;
     isMixingBowl?: boolean;
     isWashingMachine?: boolean;
-
+    hasKitchen?: boolean;
+    
     latitude?: number;
     longitude?: number;
 
@@ -37,7 +40,7 @@ export interface IHost {
     placeType?: string;
     selectedHomeIcon?: string;
     selectedPlaceIcon?: string;
-    images?: any[]; //! Getting lint error don't know type of img obj
+    images?: any[]; // Lint error for this fix later
 }
 
 // Context Interface
@@ -78,6 +81,7 @@ export const HostProvider: React.FC<IProviderProps> = ({ children }) => {
         isMicrowave: false,
         isMixingBowl: false,
         isWashingMachine: false,
+        hasKitchen: false
       } as IHost
     )
   }, []);

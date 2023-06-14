@@ -30,7 +30,7 @@ export interface IProperty {
     longtitude: number;
     propertyType: string;
     bookingType: number;
-    photographsPathList: string;
+    photographsPathList: string[];
     maxGuestCount: number;
     bedroomCount: number;
     bathroomCount: number;

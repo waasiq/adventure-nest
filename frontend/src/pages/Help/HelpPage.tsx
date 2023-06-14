@@ -1,11 +1,11 @@
 import React from "react";
-import Footer from "../components/shared/Footer/Footer";
+import Footer from "../../components/shared/Footer/Footer";
 
 const HelpPage: React.FC = () => {
   return (
     <React.Fragment>
-      <body className="flex flex-col min-h-screen">
-        <div className="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <body className="flex flex-col  min-h-screen">
+        <div className="flex-grow max-w-7xl mx-auto my-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-900 mb-8">
               Help for Guests

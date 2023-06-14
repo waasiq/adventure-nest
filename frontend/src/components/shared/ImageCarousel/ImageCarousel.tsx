@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { CSSProperties } from "react";
@@ -30,6 +30,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     borderRadius: "10px", // added border radius here
   };
 
+  useEffect(() => {
+    console.log(images);
+  }, []);
   return (
     <div style={containerStyles}>
       <Carousel
@@ -41,7 +44,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       >
         {images.map((imageUrl, index) => (
           <div key={index}>
-            <img src={imageUrl} alt={`${index}`} style={imageStyle} />
+            <img
+              src={imageUrl}
+              alt={`${index}`} 
+              style={imageStyle}
+              onError={(e) => {
+                e.currentTarget.src = "https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=";
+              }}
+            />
           </div>
         ))}
       </Carousel>

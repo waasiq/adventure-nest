@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
-import ImageCarousel from "../components/shared/ImageCarousel/ImageCarousel";
-import BookingForm from "../components/others/BookingForm/BookingForm";
-import HomeDetails from "../components/others/HomeDetails/HomeDetails";
-import Footer from "../components/shared/Footer/Footer";
-import { getAPIHandler } from "../api/apiHandler";
+import ImageCarousel from "../../components/shared/ImageCarousel/ImageCarousel";
+import BookingForm from "../../components/others/BookingForm/BookingForm";
+import HomeDetails from "../../components/others/HomeDetails/HomeDetails";
+import ApplianceDetails from "../../components/others/HomeDetails/ApplianceDetails";
+import Footer from "../../components/shared/Footer/Footer";
+import { getAPIHandler } from "../../api/apiHandler";
 import { useParams } from "react-router-dom";
-import { PublicationContext } from "../context/PublicationContext";
-import { IPublication, IProperty, IResponse } from "../types/types";
+import { PublicationContext } from "../../context/PublicationContext";
+import { IPublication, IProperty, IResponse } from "../../types/types";
 
 
 const PropertyDetails: React.FC = () => {
@@ -24,15 +25,18 @@ const PropertyDetails: React.FC = () => {
         
         setProperty(getPropertyRes.data as IProperty);
         setPublication(getPublicationRes.data as IPublication);
-
-        console.log(getPropertyRes.data as IProperty);
       } catch {
         console.log("Error fetching property details");
       }
     };
   
     fetchData();
-  }, []);
+  },  [id, propertyID, setProperty, setPublication]);
+
+  useEffect(() => {
+    console.log(property);
+    console.log(publication);
+  });
 
   // placeholder images
   const images = [
@@ -55,11 +59,26 @@ const PropertyDetails: React.FC = () => {
               {property?.bathroomCount} baths
             </p>
           </div>
-          <ImageCarousel images={images} height={500} />
+
+          {property?.photographsPathList ? (
+            <ImageCarousel images={property?.photographsPathList} height={500} />
+          ) : (
+            <ImageCarousel images={images} height={500} />
+          )}
 
           <div className="my-10 flex">
             <div className="flex-0.6">
               <HomeDetails  />
+              <ApplianceDetails 
+                isBed={property?.isBed}
+                isBlender={property?.isBlender}
+                isCoffeeMaker={property?.isCoffeeMaker}
+                isCouch={property?.isCouch}
+                isGasStove={property?.isGasStove}
+                isMicrowave={property?.isMicrowave}
+                isMixingBowl={property?.isMixingBowl}
+                isRefrigerator={property?.isRefrigerator}
+              />
             </div>
             <div className="flex-0.4 pl-16">
               <BookingForm />

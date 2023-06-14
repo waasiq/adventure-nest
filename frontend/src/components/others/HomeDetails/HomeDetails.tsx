@@ -32,8 +32,8 @@ const HomeDetails: React.FC = () => {
   return (
     <React.Fragment>
       <div className="flex flex-col border-b pb-8 border-gray-200">
-        <div className="flex p-4 border-b border-gray-200 justify-between">
-          <h2 className="text-2xl font-bold pr-96">Hosted by {user}</h2>
+        <div className="flex border-b border-gray-200 justify-between">
+          <h2 className="text-2xl font-bold py-2">Hosted by {user}</h2>
           <img
             src="https://via.placeholder.com/150"
             alt="Host avatar"
@@ -69,7 +69,7 @@ const HomeDetails: React.FC = () => {
         </div>
       </div>
 
-      <ApplianceDetails />
+
     </React.Fragment>
   );
 };

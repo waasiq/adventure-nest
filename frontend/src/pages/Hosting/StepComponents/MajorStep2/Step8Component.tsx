@@ -1,141 +1,15 @@
 import React, { useContext, useState, useEffect } from "react";
-import { HostContext, IHost } from "../../../../context/HostingContext";
-import { CurrentUserContext } from "../../../../context/CurrentUserContext";
-import axios from "axios";
-import { IResponse } from "../../../../types/types";
-import { postAPIHandler, getAPIHandler } from "../../../../api/apiHandler";
+import { HostContext } from "../../../../context/HostingContext";
 import { motion } from "framer-motion";
 
 const Step8Component: React.FC = () => {
-  const { host, setHost } = useContext(HostContext);
-  const { user } = useContext(CurrentUserContext);
+  const { setHost } = useContext(HostContext);
   const [userData, setUserData] = useState({ name: "", country: "", city: "", description: "" });
-  const [showButton, setShowButton] = useState(false);
-  const [detectedObj, setDetectedObj] = useState<string[]>([]);
-
-  useEffect(() => {
-    const detectObjects = async () => {
-      const formData = new FormData();
-    
-      if (host?.images) {
-        host.images.forEach((image) => {
-          formData.append("images", image);
-        });
-      }
-    
-      let dataArray: string[] = [];
-      await axios.post("http://localhost:5000/api/detect", formData).then((res) => {
-        dataArray = JSON.parse(res.data.detected_objects);
-      });
-
-      setDetectedObj(dataArray);
-      console.log(dataArray);
-    
-      const mapping: Record<string, keyof IHost> = {
-        Refrigerator: "isRefrigerator",
-        TV: "isTv",
-        Couch: "isCouch",
-        Bed: "isBed",
-        "Gas stove": "isGasStove",
-        Blender: "isBlender",
-        "Coffee maker": "isCoffeeMaker",
-        "Microwave oven": "isMicrowave",
-        "Mixing bowl": "isMixingBowl",
-        "Washing machine": "isWashingMachine",
-      };
-    
-      const updatedHost: IHost = { ...host };
-
-      dataArray.forEach((item) => {
-        const propertyName = mapping[item] as keyof IHost;
-        if (propertyName) {
-          //eslint-disable-next-line
-          //@ts-ignore
-          updatedHost[propertyName] = true;
-        }
-      });
-    
-      setHost(updatedHost);
-    };
-
-    detectObjects();
-  }, []);
-  
-  const sendToAPI = async () => {
-    const users = await getAPIHandler("/users");
-    const res: IResponse = users.data as IResponse;
-    const usersData = res.data as any;
-  
-    let userID = 0;
-  
-    for (let i = 0; i < usersData.length; i++) {
-      if (usersData[i].firstName === user?.firstname) {
-        userID = usersData[i].id;
-      }
-    }
-
-    // All the objects from host context are not being sent to the API so that is why 
-    // I am creating a new object with only the properties that I need
-    const transformedHost = {
-      ownerId: userID,
-      name: userData.name,
-      country: userData.country,
-      city: userData.city,
-      address: host?.address,
-      latitude: host?.latitude,
-      longtitude: host?.longitude,
-      propertyType: host?.propertyType,
-      bookingType: host?.bookingType,
-      photographsPathList: host?.images?.map((image: any) => image.path),
-      maxGuestCount: host?.maxGuestCount,
-      bedroomCount: host?.bedroomCount,
-      bathroomCount: host?.bathroomCount,
-      bedCount: host?.bedCount,
-      isRefrigerator: host?.isRefrigerator,
-      isTv: host?.isTv,
-      isCouch: host?.isCouch,
-      isBed: host?.isBed,
-      isGasStove: host?.isGasStove,
-      isBlender: host?.isBlender,
-      isCoffeeMaker: host?.isCoffeeMaker,
-      isMicrowave: host?.isMicrowave,
-      isMixingBowl: host?.isMixingBowl,
-      isWashingMachine: host?.isWashingMachine,
-      createdDate: new Date().toISOString(),    
-    };
-
-    console.log(transformedHost);
-    await postAPIHandler("/properties", transformedHost);
-
-    const getProperty = await getAPIHandler("/properties");
-    const res2: IResponse = getProperty.data as IResponse;
-
-    // get the property id of the property that was just created
-    const propertyID = res2.data[res2.data.length - 1].id as any;
-    console.log(propertyID);
-
-    // Due to backend design we also need to add the property to publication
-    const transformedPublication = {
-      propertyID: propertyID,
-      title: userData.name,
-      description: userData.description,
-      price: host?.price,
-      isActive: true,
-      createdDate: new Date().toISOString(),
-    };
-    
-    console.log(transformedPublication);
-    await postAPIHandler("/publications", transformedPublication);
-
-  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setUserData((prevData) => ({ ...prevData, [name]: value }));
-
-    if (userData.name && userData.country && userData.city && userData.description) {
-      setShowButton(true);
-    }
+    setHost((prevHost) => ({ ...prevHost, [name]: value }));
   };
 
  const containerVariants = {
@@ -161,7 +35,7 @@ const Step8Component: React.FC = () => {
           </span>
         </motion.h1>
       </div>
-      <div className="flex-1 p-10">
+      <div className="flex-1 py-20 px-4">
         <p className="text-gray-600 text-xl mb-8">
           <label className="block mb-4">
             The name you would like to put on your listing:
@@ -204,27 +78,6 @@ const Step8Component: React.FC = () => {
             />
           </label>
         </p>
-
-        <p className="text-xl mb-4">The detected objects in your house are:</p>
-        <ul>
-          {detectedObj.map((object, index) => (
-            <li key={index}>{object}</li>
-          ))}
-        </ul>
-
-        <div className="flex justify-center">
-          {showButton && (
-            <motion.button
-              onClick={sendToAPI}
-              className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-4 px-4  rounded-full"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.6 }}
-            >
-              Finish booking
-            </motion.button>
-          )}
-        </div>
       </div>
     </motion.div>
   );

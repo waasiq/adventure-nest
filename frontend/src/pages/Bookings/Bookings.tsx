@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
-import { getAPIHandler } from "../api/apiHandler";
-import { CurrentUserContext } from "../context/CurrentUserContext";
-import { IUser, IResponse } from "../types/types";
+import { getAPIHandler } from "../../api/apiHandler";
+import { CurrentUserContext } from "../../context/CurrentUserContext";
+import { IUser, IResponse } from "../../types/types";
 
 const Bookings = () => {
     const { user } = useContext(CurrentUserContext);   

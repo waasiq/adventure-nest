@@ -37,5 +37,7 @@ namespace AdventureNest.Core.DTOs
         public bool IsMixingBowl { get; set; }
 
         public bool IsWashingMachine { get; set; }
+
+        public bool hasKitchen { get; set; }
     }
 }

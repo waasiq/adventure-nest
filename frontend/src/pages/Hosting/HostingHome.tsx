@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Step1Component, Step2Component, Step3Component, Step4Component, Step5Component } from "./StepComponents/MajorStep1";
 import { Step6Component, Step7Component, Step8Component } from "./StepComponents/MajorStep2";
+import FinalStep from './StepComponents/FinalStep';
 import { HostProvider } from "../../context/HostingContext";
 
 const HostingHome: React.FC = () => {
@@ -15,8 +16,9 @@ const HostingHome: React.FC = () => {
     <Step6Component key={6} />,
     <Step7Component key={7} />,
     <Step8Component key={8} />,
+    <FinalStep key={9} />
   ];
-
+  
   const stepSize = stepComponents.length;
 
   const handleBack = () => setStep((prevStep) => prevStep - 1);

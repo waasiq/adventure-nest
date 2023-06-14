@@ -21,7 +21,7 @@ const StepperItem:React.FC<IStepperProps> = (props) => {
 
     return (
         <React.Fragment>
-            <div className="border-b border-gray-200 mx-32 py-10 flex flex-row justify-between">
+            <div className="border-b border-gray-200 mx-26 py-7 flex flex-row justify-between">
                 <p className="text-xl">{title} </p>
                 <StepperButton value={count} minValue={minValue} maxValue={maxValue} onChange={handleCountChange} />
             </div>

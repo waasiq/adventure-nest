@@ -29,6 +29,7 @@ namespace AdventureNest.Repository.Configuring
             builder.Property(x => x.IsBlender).IsRequired();
             builder.Property(x => x.IsCoffeeMaker).IsRequired();
             builder.Property(x => x.IsMicrowave).IsRequired();
+            builder.Property(x => x.hasKitchen).IsRequired();
             builder.Property(x => x.IsMixingBowl).IsRequired();
             builder.Property(x => x.IsWashingMachine).IsRequired();
             builder.Property(x => x.PhotographsPathList).HasConversion(

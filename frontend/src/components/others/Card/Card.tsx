@@ -25,7 +25,6 @@ const Card: React.FC<CardProps> = ({
   const navigate = useNavigate();
 
   const handleClick = () => { 
-    // navigate(`/property-details/${id}`);
     navigate(`/property-details/${id}/${propertyID}`); // navigate to the property-details route with id and propertyID
   };
   

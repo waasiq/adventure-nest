@@ -39,7 +39,8 @@ namespace AdventureNest.Repository.Seeds
                     IsCoffeeMaker = true,
                     IsMicrowave = true,
                     IsMixingBowl = true,
-                    IsWashingMachine = true
+                    IsWashingMachine = true,
+                    hasKitchen = true
                 },
                 new Property
                 {
@@ -68,7 +69,8 @@ namespace AdventureNest.Repository.Seeds
                     IsCoffeeMaker = true,
                     IsMicrowave = true,
                     IsMixingBowl = true,
-                    IsWashingMachine = true
+                    IsWashingMachine = true,
+                    hasKitchen = true
                 },
                 new Property
                 {
@@ -97,7 +99,8 @@ namespace AdventureNest.Repository.Seeds
                     IsCoffeeMaker = true,
                     IsMicrowave = true,
                     IsMixingBowl = true,
-                    IsWashingMachine = true
+                    IsWashingMachine = true,
+                    hasKitchen = true
                 },
                 new Property
                 {
@@ -126,7 +129,8 @@ namespace AdventureNest.Repository.Seeds
                     IsCoffeeMaker = true,
                     IsMicrowave = true,
                     IsMixingBowl = true,
-                    IsWashingMachine = true
+                    IsWashingMachine = true,
+                    hasKitchen = true
                 },
                 new Property
                 {
@@ -155,7 +159,8 @@ namespace AdventureNest.Repository.Seeds
                     IsCoffeeMaker = true,
                     IsMicrowave = true,
                     IsMixingBowl = true,
-                    IsWashingMachine = true
+                    IsWashingMachine = true,
+                    hasKitchen = true
                 },
                 new Property
                 {
@@ -184,9 +189,10 @@ namespace AdventureNest.Repository.Seeds
                     IsCoffeeMaker = true,
                     IsMicrowave = true,
                     IsMixingBowl = true,
-                    IsWashingMachine = true
+                    IsWashingMachine = true,
+                    hasKitchen = true
                 }
-                );
+            );
         }
     }
 }

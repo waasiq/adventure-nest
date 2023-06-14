@@ -38,10 +38,10 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Middle of navbar */}
-      <div className="hidden md:flex items-center border border-gray-400 rounded-full px-4 py-2">
+      {/* Middle of navbar, add search later on */}
+      {/* <div className="hidden md:flex items-center border border-gray-400 rounded-full px-4 py-2"> */}
         {/* !Insert here later on */}
-      </div>
+      {/* </div> */}
 
 
       <div className="flex items-center space-x-4 mx-10">

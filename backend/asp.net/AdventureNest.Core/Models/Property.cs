@@ -52,6 +52,8 @@ namespace AdventureNest.Core.Models
 
         public bool IsWashingMachine { get; set; }
 
+        public bool hasKitchen { get; set; }
+
         [ForeignKey("OwnerId")]
         public User User { get; set; }
 
