@@ -1,9 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-auto bg-gray-100 text-black-300">
+    <motion.footer
+      className="mt-auto bg-gray-100 text-black-300"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
       <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between">
         <div className="mb-8 md:mb-0">
           <h3 className="text-lg font-medium">About Adventure Nest</h3>
@@ -91,13 +97,12 @@ const Footer: React.FC = () => {
           </ul>
         </div>
       </div>
-      <div className="bg-gray-100  py-4 text-center">
+      <div className="bg-gray-100 py-4 text-center">
         <p className="text-sm text-black-300">
-          &copy; {new Date().getFullYear()} Adventure Nest, Inc. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} Adventure Nest, Inc. All rights reserved.
         </p>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 
