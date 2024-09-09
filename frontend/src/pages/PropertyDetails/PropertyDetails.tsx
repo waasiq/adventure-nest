@@ -77,14 +77,16 @@ const PropertyDetails: React.FC = () => {
               <div className="flex-0.6">
                 <HomeDetails />
                 <ApplianceDetails
-                  isBed={property?.isBed}
-                  isBlender={property?.isBlender}
-                  isCoffeeMaker={property?.isCoffeeMaker}
-                  isCouch={property?.isCouch}
-                  isGasStove={property?.isGasStove}
-                  isMicrowave={property?.isMicrowave}
-                  isMixingBowl={property?.isMixingBowl}
-                  isRefrigerator={property?.isRefrigerator}
+                  isBed={property?.isBed || false}
+                  isBlender={property?.isBlender || false}
+                  isCoffeeMaker={property?.isCoffeeMaker || false}
+                  isCouch={property?.isCouch || false} 
+                  isGasStove={property?.isGasStove || false}
+                  isMicrowave={property?.isMicrowave || false}
+                  isMixingBowl={property?.isMixingBowl || false}
+                  isRefrigerator={property?.isRefrigerator || false}
+                  isWashingMachine={property?.isWashingMachine || false}
+                  isTelevision={property?.isTelevision || false}
                 />
               </div>
               <div className="flex-0.4 pl-16">

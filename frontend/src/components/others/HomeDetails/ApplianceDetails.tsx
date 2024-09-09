@@ -10,10 +10,12 @@ interface Props {
   isMicrowave: boolean;
   isMixingBowl: boolean;
   isRefrigerator: boolean;
+  isWashingMachine: boolean;
+  isTelevision: boolean;
 }
 
 const ApplianceDetails: React.FC<Props> = (props) => {
-  const { isBed, isBlender, isCoffeeMaker, isCouch, isGasStove, isMicrowave, isMixingBowl, isRefrigerator } = props;
+  const { isBed, isBlender, isCoffeeMaker,isTelevision, isWashingMachine ,isCouch, isGasStove, isMicrowave, isMixingBowl, isRefrigerator } = props;
 
   const renderIcon = (value: boolean) => {
     if (value) {
@@ -60,6 +62,14 @@ const ApplianceDetails: React.FC<Props> = (props) => {
             <div className="flex items-center">
               {renderIcon(isRefrigerator)}
               <span className="ml-2 text-lg">Refrigerator</span>
+            </div>
+            <div className="flex items-center">
+              {renderIcon(isWashingMachine)}
+              <span className="ml-2 text-lg">Washing Machine</span>
+            </div>
+            <div className="flex items-center">
+              {renderIcon(isTelevision)}
+              <span className="ml-2 text-lg">Television</span>
             </div>
           </div>
         </div>

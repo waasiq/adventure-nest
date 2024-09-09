@@ -35,12 +35,16 @@ export interface IProperty {
     bedroomCount: number;
     bathroomCount: number;
     bedCount: number;
-    isDishwasher: boolean;
-    isFridge: boolean;
-    isTv: boolean;
-    isSofa: boolean;
-    isTable: boolean;
-    isChair: boolean;
+    isBed: boolean;
+    isBlender: boolean;
+    isCoffeeMaker: boolean;
+    isCouch: boolean;
+    isGasStove: boolean;
+    isMicrowave: boolean;
+    isMixingBowl: boolean;
+    isRefrigerator: boolean;
+    isWashingMachine: boolean;
+
     createdDate: string;
     [key: string]: any; // Add an index signature
 }
